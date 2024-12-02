@@ -31,61 +31,62 @@
             // 
             lblUsername.AutoSize = true;
             lblUsername.Font = new Font("Segoe UI", 12F);
-            lblUsername.Location = new Point(83, 192);
-            lblUsername.Margin = new Padding(5, 0, 5, 0);
+            lblUsername.Location = new Point(66, 154);
+            lblUsername.Margin = new Padding(4, 0, 4, 0);
             lblUsername.Name = "lblUsername";
-            lblUsername.Size = new Size(126, 32);
+            lblUsername.Size = new Size(103, 28);
             lblUsername.TabIndex = 9;
             lblUsername.Text = "Username:";
             // 
             // txtUsername
             // 
             txtUsername.Font = new Font("Segoe UI", 12F);
-            txtUsername.Location = new Point(300, 187);
-            txtUsername.Margin = new Padding(5, 6, 5, 6);
+            txtUsername.Location = new Point(240, 150);
+            txtUsername.Margin = new Padding(4, 5, 4, 5);
             txtUsername.Name = "txtUsername";
-            txtUsername.Size = new Size(497, 39);
+            txtUsername.Size = new Size(398, 34);
             txtUsername.TabIndex = 0;
             // 
             // lblPassword
             // 
             lblPassword.AutoSize = true;
             lblPassword.Font = new Font("Segoe UI", 12F);
-            lblPassword.Location = new Point(83, 288);
-            lblPassword.Margin = new Padding(5, 0, 5, 0);
+            lblPassword.Location = new Point(66, 230);
+            lblPassword.Margin = new Padding(4, 0, 4, 0);
             lblPassword.Name = "lblPassword";
-            lblPassword.Size = new Size(116, 32);
+            lblPassword.Size = new Size(97, 28);
             lblPassword.TabIndex = 8;
             lblPassword.Text = "Password:";
             // 
             // txtPassword
             // 
             txtPassword.Font = new Font("Segoe UI", 12F);
-            txtPassword.Location = new Point(300, 283);
-            txtPassword.Margin = new Padding(5, 6, 5, 6);
+            txtPassword.Location = new Point(240, 226);
+            txtPassword.Margin = new Padding(4, 5, 4, 5);
             txtPassword.Name = "txtPassword";
-            txtPassword.Size = new Size(497, 39);
+            txtPassword.Size = new Size(398, 34);
             txtPassword.TabIndex = 1;
             txtPassword.UseSystemPasswordChar = true;
+            txtPassword.TextChanged += txtPassword_TextChanged;
             // 
             // lblConfirmPassword
             // 
             lblConfirmPassword.AutoSize = true;
             lblConfirmPassword.Font = new Font("Segoe UI", 12F);
-            lblConfirmPassword.Location = new Point(83, 385);
-            lblConfirmPassword.Margin = new Padding(5, 0, 5, 0);
+            lblConfirmPassword.Location = new Point(66, 308);
+            lblConfirmPassword.Margin = new Padding(4, 0, 4, 0);
             lblConfirmPassword.Name = "lblConfirmPassword";
-            lblConfirmPassword.Size = new Size(209, 32);
+            lblConfirmPassword.Size = new Size(172, 28);
             lblConfirmPassword.TabIndex = 7;
             lblConfirmPassword.Text = "Confirm Password:";
             // 
             // txtConfirmPassword
             // 
             txtConfirmPassword.Font = new Font("Segoe UI", 12F);
-            txtConfirmPassword.Location = new Point(300, 379);
-            txtConfirmPassword.Margin = new Padding(5, 6, 5, 6);
+            txtConfirmPassword.Location = new Point(240, 303);
+            txtConfirmPassword.Margin = new Padding(4, 5, 4, 5);
             txtConfirmPassword.Name = "txtConfirmPassword";
-            txtConfirmPassword.Size = new Size(497, 39);
+            txtConfirmPassword.Size = new Size(398, 34);
             txtConfirmPassword.TabIndex = 2;
             txtConfirmPassword.UseSystemPasswordChar = true;
             // 
@@ -93,29 +94,29 @@
             // 
             lblEmail.AutoSize = true;
             lblEmail.Font = new Font("Segoe UI", 12F);
-            lblEmail.Location = new Point(83, 481);
-            lblEmail.Margin = new Padding(5, 0, 5, 0);
+            lblEmail.Location = new Point(66, 385);
+            lblEmail.Margin = new Padding(4, 0, 4, 0);
             lblEmail.Name = "lblEmail";
-            lblEmail.Size = new Size(76, 32);
+            lblEmail.Size = new Size(63, 28);
             lblEmail.TabIndex = 6;
             lblEmail.Text = "Email:";
             // 
             // txtEmail
             // 
             txtEmail.Font = new Font("Segoe UI", 12F);
-            txtEmail.Location = new Point(300, 475);
-            txtEmail.Margin = new Padding(5, 6, 5, 6);
+            txtEmail.Location = new Point(240, 380);
+            txtEmail.Margin = new Padding(4, 5, 4, 5);
             txtEmail.Name = "txtEmail";
-            txtEmail.Size = new Size(497, 39);
+            txtEmail.Size = new Size(398, 34);
             txtEmail.TabIndex = 3;
             // 
             // btnRegister
             // 
             btnRegister.Font = new Font("Segoe UI", 12F);
-            btnRegister.Location = new Point(567, 577);
-            btnRegister.Margin = new Padding(5, 6, 5, 6);
+            btnRegister.Location = new Point(454, 462);
+            btnRegister.Margin = new Padding(4, 5, 4, 5);
             btnRegister.Name = "btnRegister";
-            btnRegister.Size = new Size(233, 77);
+            btnRegister.Size = new Size(186, 62);
             btnRegister.TabIndex = 4;
             btnRegister.Text = "Register";
             btnRegister.UseVisualStyleBackColor = true;
@@ -124,10 +125,10 @@
             // btnCancel
             // 
             btnCancel.Font = new Font("Segoe UI", 12F);
-            btnCancel.Location = new Point(300, 577);
-            btnCancel.Margin = new Padding(5, 6, 5, 6);
+            btnCancel.Location = new Point(240, 462);
+            btnCancel.Margin = new Padding(4, 5, 4, 5);
             btnCancel.Name = "btnCancel";
-            btnCancel.Size = new Size(233, 77);
+            btnCancel.Size = new Size(186, 62);
             btnCancel.TabIndex = 5;
             btnCancel.Text = "Cancel";
             btnCancel.UseVisualStyleBackColor = true;
@@ -135,10 +136,10 @@
             // 
             // RegistrationForm
             // 
-            AutoScaleDimensions = new SizeF(10F, 25F);
+            AutoScaleDimensions = new SizeF(8F, 20F);
             AutoScaleMode = AutoScaleMode.Font;
             BackColor = Color.FromArgb(128, 128, 255);
-            ClientSize = new Size(1333, 865);
+            ClientSize = new Size(1066, 692);
             Controls.Add(btnCancel);
             Controls.Add(btnRegister);
             Controls.Add(txtEmail);
@@ -149,9 +150,10 @@
             Controls.Add(lblPassword);
             Controls.Add(txtUsername);
             Controls.Add(lblUsername);
-            Margin = new Padding(5, 6, 5, 6);
+            Margin = new Padding(4, 5, 4, 5);
             Name = "RegistrationForm";
             Text = "Register New User";
+            Load += RegistrationForm_Load;
             ResumeLayout(false);
             PerformLayout();
         }

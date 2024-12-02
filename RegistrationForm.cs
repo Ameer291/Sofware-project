@@ -101,6 +101,16 @@ namespace Software_project
         {
             this.Close();
         }
+
+        private void RegistrationForm_Load(object sender, EventArgs e)
+        {
+
+        }
+
+        private void txtPassword_TextChanged(object sender, EventArgs e)
+        {
+
+        }
     }
 }
 

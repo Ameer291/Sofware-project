@@ -25,11 +25,11 @@ namespace Software_project
         private void LoadRememberedUsername()
         {
             // Load remembered username if the "Remember Me" option was previously selected
-            if (Software_project.Properties.Settings.Default.RememberMe)
-            {
-                txtUsername.Text = Software_project.Properties.Settings.Default.Username;
-                chkRememberMe.Checked = true;
-            }
+            //if (Software_project.Properties.Settings.Default.RememberMe)
+            //{
+            //    txtUsername.Text = Software_project.Properties.Settings.Default.Username;
+            //    chkRememberMe.Checked = true;
+            //}
         }
 
         private void btnLogin_Click(object sender, EventArgs e)
@@ -42,15 +42,17 @@ namespace Software_project
                 // Save username for "Remember Me" functionality
                 if (chkRememberMe.Checked)
                 {
-                    Software_project.Properties.Settings.Default.Username = txtUsername.Text;
-                    Software_project.Properties.Settings.Default.RememberMe = true;
-                    Software_project.Properties.Settings.Default.Save(); // Saves the settings to disk
+                    //Properties.Settings.GetType
+                    string text = txtUsername.Text;
+                    //Software_project.Properties.Settings.Default.Username = "text";
+                    //Software_project.Properties.Settings.Default.RememberMe = true;
+                    //Software_project.Properties.Settings.Default.Save(); // Saves the settings to disk
                 }
                 else
                 {
-                    Software_project.Properties.Settings.Default.RememberMe = false;
-                    Software_project.Properties.Settings.Default.Username = string.Empty;
-                    Software_project.Properties.Settings.Default.Save(); // Saves the settings to disk
+                    //Software_project.Properties.Settings.Default.RememberMe = false;
+                    //Software_project.Properties.Settings.Default.Username = string.Empty;
+                    //Software_project.Properties.Settings.Default.Save(); // Saves the settings to disk
                 }
 
                 this.Hide();
@@ -110,6 +112,26 @@ namespace Software_project
 
         private void label1_Click(object sender, EventArgs e)
         {
+        }
+
+        private void label1_Click_1(object sender, EventArgs e)
+        {
+
+        }
+
+        private void btnLogin_Click_1(object sender, EventArgs e)
+        {
+
+        }
+
+        private void lblUsername_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void lnkSignUp_LinkClicked_1(object sender, LinkLabelLinkClickedEventArgs e)
+        {
+
         }
     }
 }

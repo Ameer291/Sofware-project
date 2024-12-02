@@ -85,6 +85,11 @@ namespace Software_project
         {
             this.Close();
         }
+
+        private void lblEmail_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }
 

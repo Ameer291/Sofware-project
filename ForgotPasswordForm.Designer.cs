@@ -28,57 +28,67 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.txtEmail = new System.Windows.Forms.TextBox();
-            this.btnSendLink = new System.Windows.Forms.Button();
-            this.btnCancel = new System.Windows.Forms.Button();
-            this.lblEmail = new System.Windows.Forms.Label();
-
-            this.SuspendLayout();
-
+            txtEmail = new TextBox();
+            btnSendLink = new Button();
+            btnCancel = new Button();
+            lblEmail = new Label();
+            SuspendLayout();
+            // 
             // txtEmail
-            this.txtEmail.Location = new System.Drawing.Point(50, 50);
-            this.txtEmail.Name = "txtEmail";
-            this.txtEmail.Size = new System.Drawing.Size(200, 20);
-            this.txtEmail.TabIndex = 0;
-
+            // 
+            txtEmail.Location = new Point(67, 77);
+            txtEmail.Margin = new Padding(4, 5, 4, 5);
+            txtEmail.Name = "txtEmail";
+            txtEmail.Size = new Size(265, 27);
+            txtEmail.TabIndex = 0;
+            // 
             // btnSendLink
-            this.btnSendLink.Location = new System.Drawing.Point(50, 90);
-            this.btnSendLink.Name = "btnSendLink";
-            this.btnSendLink.Size = new System.Drawing.Size(100, 23);
-            this.btnSendLink.TabIndex = 1;
-            this.btnSendLink.Text = "Send Reset Link";
-            this.btnSendLink.UseVisualStyleBackColor = true;
-            this.btnSendLink.Click += new System.EventHandler(this.btnSendLink_Click);
-
+            // 
+            btnSendLink.Location = new Point(67, 138);
+            btnSendLink.Margin = new Padding(4, 5, 4, 5);
+            btnSendLink.Name = "btnSendLink";
+            btnSendLink.Size = new Size(133, 35);
+            btnSendLink.TabIndex = 1;
+            btnSendLink.Text = "Send Reset Link";
+            btnSendLink.UseVisualStyleBackColor = true;
+            btnSendLink.Click += btnSendLink_Click;
+            // 
             // btnCancel
-            this.btnCancel.Location = new System.Drawing.Point(160, 90);
-            this.btnCancel.Name = "btnCancel";
-            this.btnCancel.Size = new System.Drawing.Size(90, 23);
-            this.btnCancel.TabIndex = 2;
-            this.btnCancel.Text = "Cancel";
-            this.btnCancel.UseVisualStyleBackColor = true;
-            this.btnCancel.Click += new System.EventHandler(this.btnCancel_Click);
-
+            // 
+            btnCancel.Location = new Point(213, 138);
+            btnCancel.Margin = new Padding(4, 5, 4, 5);
+            btnCancel.Name = "btnCancel";
+            btnCancel.Size = new Size(120, 35);
+            btnCancel.TabIndex = 2;
+            btnCancel.Text = "Cancel";
+            btnCancel.UseVisualStyleBackColor = true;
+            btnCancel.Click += btnCancel_Click;
+            // 
             // lblEmail
-            this.lblEmail.AutoSize = true;
-            this.lblEmail.Location = new System.Drawing.Point(47, 30);
-            this.lblEmail.Name = "lblEmail";
-            this.lblEmail.Size = new System.Drawing.Size(76, 13);
-            this.lblEmail.TabIndex = 3;
-            this.lblEmail.Text = "Enter your email:";
-
+            // 
+            lblEmail.AutoSize = true;
+            lblEmail.Location = new Point(63, 46);
+            lblEmail.Margin = new Padding(4, 0, 4, 0);
+            lblEmail.Name = "lblEmail";
+            lblEmail.Size = new Size(120, 20);
+            lblEmail.TabIndex = 3;
+            lblEmail.Text = "Enter your email:";
+            lblEmail.Click += lblEmail_Click;
+            // 
             // ForgotPasswordForm
-            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
-            this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(300, 150);
-            this.Controls.Add(this.lblEmail);
-            this.Controls.Add(this.txtEmail);
-            this.Controls.Add(this.btnSendLink);
-            this.Controls.Add(this.btnCancel);
-            this.Name = "ForgotPasswordForm";
-            this.Text = "Forgot Password";
-            this.ResumeLayout(false);
-            this.PerformLayout();
+            // 
+            AutoScaleDimensions = new SizeF(8F, 20F);
+            AutoScaleMode = AutoScaleMode.Font;
+            ClientSize = new Size(400, 231);
+            Controls.Add(lblEmail);
+            Controls.Add(txtEmail);
+            Controls.Add(btnSendLink);
+            Controls.Add(btnCancel);
+            Margin = new Padding(4, 5, 4, 5);
+            Name = "ForgotPasswordForm";
+            Text = "Forgot Password";
+            ResumeLayout(false);
+            PerformLayout();
         }
 
         #endregion
