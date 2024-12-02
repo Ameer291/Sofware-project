@@ -1,4 +1,4 @@
-﻿namespace Software_project
+﻿namespace Sofware_project
 {
     partial class RegistrationForm
     {
@@ -25,6 +25,7 @@
             txtEmail = new TextBox();
             btnRegister = new Button();
             btnCancel = new Button();
+            label1 = new Label();
             SuspendLayout();
             // 
             // lblUsername
@@ -134,12 +135,22 @@
             btnCancel.UseVisualStyleBackColor = true;
             btnCancel.Click += btnCancel_Click;
             // 
+            // label1
+            // 
+            label1.AutoSize = true;
+            label1.ForeColor = Color.White;
+            label1.Location = new Point(0, 0);
+            label1.Name = "label1";
+            label1.Size = new Size(142, 25);
+            label1.TabIndex = 10;
+            label1.Text = "Together Culture";
+            // 
             // RegistrationForm
             // 
             AutoScaleDimensions = new SizeF(8F, 20F);
             AutoScaleMode = AutoScaleMode.Font;
             BackColor = Color.FromArgb(128, 128, 255);
-            ClientSize = new Size(1066, 692);
+            ClientSize = new Size(1333, 865);
             Controls.Add(btnCancel);
             Controls.Add(btnRegister);
             Controls.Add(txtEmail);
@@ -168,5 +179,6 @@
         private System.Windows.Forms.TextBox txtEmail;
         private System.Windows.Forms.Button btnRegister;
         private System.Windows.Forms.Button btnCancel;
+        private Label label1;
     }
 }

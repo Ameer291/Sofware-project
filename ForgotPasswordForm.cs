@@ -3,7 +3,7 @@ using System;
 using System.Net.Mail;
 using System.Windows.Forms;
 
-namespace Software_project
+namespace Sofware_project
 {
     public partial class ForgotPasswordForm : Form
     {
