@@ -2,7 +2,7 @@
 using System;
 using System.Windows.Forms;
 
-namespace Software_project
+namespace Sofware_project
 {
     public partial class RegistrationForm : Form
     {

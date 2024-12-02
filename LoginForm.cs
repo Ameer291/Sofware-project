@@ -4,7 +4,7 @@ using System;
 using System.Drawing;
 using System.Windows.Forms;
 
-namespace Software_project
+namespace Sofware_project
 {
     public partial class LoginForm : Form
     {
@@ -25,9 +25,9 @@ namespace Software_project
         private void LoadRememberedUsername()
         {
             // Load remembered username if the "Remember Me" option was previously selected
-            if (Software_project.Properties.Settings.Default.RememberMe)
+            if (Sofware_project.Properties.Settings.Default.RememberMe)
             {
-                txtUsername.Text = Software_project.Properties.Settings.Default.Username;
+                txtUsername.Text = Sofware_project.Properties.Settings.Default.Username;
                 chkRememberMe.Checked = true;
             }
         }
@@ -42,15 +42,15 @@ namespace Software_project
                 // Save username for "Remember Me" functionality
                 if (chkRememberMe.Checked)
                 {
-                    Software_project.Properties.Settings.Default.Username = txtUsername.Text;
-                    Software_project.Properties.Settings.Default.RememberMe = true;
-                    Software_project.Properties.Settings.Default.Save(); // Saves the settings to disk
+                    Sofware_project.Properties.Settings.Default.Username = txtUsername.Text;
+                    Sofware_project.Properties.Settings.Default.RememberMe = true;
+                    Sofware_project.Properties.Settings.Default.Save(); // Saves the settings to disk
                 }
                 else
                 {
-                    Software_project.Properties.Settings.Default.RememberMe = false;
-                    Software_project.Properties.Settings.Default.Username = string.Empty;
-                    Software_project.Properties.Settings.Default.Save(); // Saves the settings to disk
+                    Sofware_project.Properties.Settings.Default.RememberMe = false;
+                    Sofware_project.Properties.Settings.Default.Username = string.Empty;
+                    Sofware_project.Properties.Settings.Default.Save(); // Saves the settings to disk
                 }
 
                 this.Hide();
@@ -62,6 +62,21 @@ namespace Software_project
                 MessageBox.Show("Invalid credentials, please try again.", "Login Failed", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
         }
+        private void btnLogin_Click(object sender, EventArgs e)
+        {
+            if (IsValidUser(txtUsername.Text.Trim(), txtPassword.Text))
+            {
+                this.Hide();
+                DashboardForm dashboard = new DashboardForm();
+                dashboard.Show();
+                dashboard.FormClosed += (s, args) => this.Close(); // Close LoginForm when Dashboard is closed
+            }
+            else
+            {
+                MessageBox.Show("Invalid credentials, please try again.");
+            }
+        }
+
 
         private bool IsValidUser(string username, string password, string connectionString)
         {
@@ -110,6 +125,11 @@ namespace Software_project
 
         private void label1_Click(object sender, EventArgs e)
         {
+        }
+
+        private void LoginForm_Load_1(object sender, EventArgs e)
+        {
+
         }
     }
 }

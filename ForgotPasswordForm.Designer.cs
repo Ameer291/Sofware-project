@@ -1,4 +1,4 @@
-﻿namespace Software_project
+﻿namespace Sofware_project
 {
     partial class ForgotPasswordForm
     {

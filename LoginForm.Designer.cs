@@ -1,180 +1,150 @@
-﻿namespace Software_project
+﻿namespace Sofware_project
 {
     partial class LoginForm
     {
         private System.ComponentModel.IContainer components = null;
-        private System.Windows.Forms.Panel pnlContainer;
-        private System.Windows.Forms.Label lblUsername;
-        private System.Windows.Forms.Label lblPassword;
         private System.Windows.Forms.TextBox txtUsername;
         private System.Windows.Forms.TextBox txtPassword;
-        private System.Windows.Forms.CheckBox chkRememberMe;
         private System.Windows.Forms.Button btnLogin;
         private System.Windows.Forms.LinkLabel lnkForgotPassword;
         private System.Windows.Forms.LinkLabel lnkSignUp;
-        private System.Windows.Forms.Label label1;
-        private System.Windows.Forms.Label label2;
-        private System.Windows.Forms.Label label3;
+        private System.Windows.Forms.Label lblTitle;
+        private System.Windows.Forms.Panel pnlContainer;
+        private System.Windows.Forms.Label lblUsername;
+        private System.Windows.Forms.Label lblPassword;
+        private System.Windows.Forms.CheckBox chkRememberMe;
 
-        /// <summary>
-        /// Clean up any resources being used.
-        /// </summary>
-        /// <param name="disposing">true if managed resources should be disposed; otherwise, false.</param>
-        protected override void Dispose(bool disposing)
-        {
-            if (disposing && (components != null))
-            {
-                components.Dispose();
-            }
-            base.Dispose(disposing);
-        }
-
-        #region Windows Form Designer generated code
-
-        /// <summary>
-        /// Required method for Designer support - do not modify
-        /// the contents of this method with the code editor.
-        /// </summary>
         private void InitializeComponent()
         {
-            this.pnlContainer = new System.Windows.Forms.Panel();
-            this.lblUsername = new System.Windows.Forms.Label();
-            this.txtUsername = new System.Windows.Forms.TextBox();
-            this.lblPassword = new System.Windows.Forms.Label();
-            this.txtPassword = new System.Windows.Forms.TextBox();
-            this.chkRememberMe = new System.Windows.Forms.CheckBox();
-            this.btnLogin = new System.Windows.Forms.Button();
-            this.lnkForgotPassword = new System.Windows.Forms.LinkLabel();
-            this.lnkSignUp = new System.Windows.Forms.LinkLabel();
-            this.label1 = new System.Windows.Forms.Label();
-            this.label2 = new System.Windows.Forms.Label();
-            this.label3 = new System.Windows.Forms.Label();
-            this.pnlContainer.SuspendLayout();
-            this.SuspendLayout();
-
+            pnlContainer = new Panel();
+            lblUsername = new Label();
+            lblTitle = new Label();
+            lblPassword = new Label();
+            txtUsername = new TextBox();
+            txtPassword = new TextBox();
+            chkRememberMe = new CheckBox();
+            btnLogin = new Button();
+            lnkForgotPassword = new LinkLabel();
+            lnkSignUp = new LinkLabel();
+            pnlContainer.SuspendLayout();
+            SuspendLayout();
+            // 
             // pnlContainer
-            this.pnlContainer.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.pnlContainer.BackColor = System.Drawing.Color.FromArgb(192, 192, 255);
-            this.pnlContainer.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.pnlContainer.Controls.Add(this.label3);
-            this.pnlContainer.Controls.Add(this.label2);
-            this.pnlContainer.Controls.Add(this.label1);
-            this.pnlContainer.Controls.Add(this.lblUsername);
-            this.pnlContainer.Controls.Add(this.txtUsername);
-            this.pnlContainer.Controls.Add(this.lblPassword);
-            this.pnlContainer.Controls.Add(this.txtPassword);
-            this.pnlContainer.Controls.Add(this.chkRememberMe);
-            this.pnlContainer.Controls.Add(this.btnLogin);
-            this.pnlContainer.Controls.Add(this.lnkForgotPassword);
-            this.pnlContainer.Controls.Add(this.lnkSignUp);
-            this.pnlContainer.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.pnlContainer.Location = new System.Drawing.Point(403, 100);
-            this.pnlContainer.Name = "pnlContainer";
-            this.pnlContainer.Size = new System.Drawing.Size(428, 480);
-            this.pnlContainer.TabIndex = 0;
-
+            // 
+            pnlContainer.BackColor = Color.FromArgb(192, 192, 255);
+            pnlContainer.Controls.Add(lblUsername);
+            pnlContainer.Controls.Add(lblTitle);
+            pnlContainer.Controls.Add(lblPassword);
+            pnlContainer.Controls.Add(txtUsername);
+            pnlContainer.Controls.Add(txtPassword);
+            pnlContainer.Controls.Add(chkRememberMe);
+            pnlContainer.Controls.Add(btnLogin);
+            pnlContainer.Controls.Add(lnkForgotPassword);
+            pnlContainer.Controls.Add(lnkSignUp);
+            pnlContainer.Location = new Point(617, 178);
+            pnlContainer.Name = "pnlContainer";
+            pnlContainer.Size = new Size(614, 635);
+            pnlContainer.TabIndex = 0;
+            // 
             // lblUsername
-            this.lblUsername.Location = new System.Drawing.Point(20, 115);
-            this.lblUsername.Name = "lblUsername";
-            this.lblUsername.Size = new System.Drawing.Size(100, 23);
-            this.lblUsername.TabIndex = 0;
-            this.lblUsername.Text = "Username/Email:";
-
-            // txtUsername
-            this.txtUsername.Location = new System.Drawing.Point(126, 112);
-            this.txtUsername.Name = "txtUsername";
-            this.txtUsername.Size = new System.Drawing.Size(200, 31);
-            this.txtUsername.TabIndex = 1;
-
+            // 
+            lblUsername.AutoSize = true;
+            lblUsername.Location = new Point(86, 186);
+            lblUsername.Name = "lblUsername";
+            lblUsername.Size = new Size(95, 25);
+            lblUsername.TabIndex = 0;
+            lblUsername.Text = "Username:";
+            // 
+            // lblTitle
+            // 
+            lblTitle.AutoSize = true;
+            lblTitle.Font = new Font("Segoe UI", 12F, FontStyle.Bold);
+            lblTitle.ForeColor = Color.White;
+            lblTitle.Location = new Point(12, 11);
+            lblTitle.Name = "lblTitle";
+            lblTitle.Size = new Size(206, 32);
+            lblTitle.TabIndex = 1;
+            lblTitle.Text = "Together Culture";
+            // 
             // lblPassword
-            this.lblPassword.Location = new System.Drawing.Point(20, 165);
-            this.lblPassword.Name = "lblPassword";
-            this.lblPassword.Size = new System.Drawing.Size(100, 23);
-            this.lblPassword.TabIndex = 2;
-            this.lblPassword.Text = "Password:";
-
+            // 
+            lblPassword.AutoSize = true;
+            lblPassword.Location = new Point(86, 255);
+            lblPassword.Name = "lblPassword";
+            lblPassword.Size = new Size(91, 25);
+            lblPassword.TabIndex = 1;
+            lblPassword.Text = "Password:";
+            // 
+            // txtUsername
+            // 
+            txtUsername.Location = new Point(196, 183);
+            txtUsername.Name = "txtUsername";
+            txtUsername.Size = new Size(257, 31);
+            txtUsername.TabIndex = 2;
+            // 
             // txtPassword
-            this.txtPassword.Location = new System.Drawing.Point(126, 162);
-            this.txtPassword.Name = "txtPassword";
-            this.txtPassword.Size = new System.Drawing.Size(200, 31);
-            this.txtPassword.TabIndex = 3;
-            this.txtPassword.UseSystemPasswordChar = true;
-
+            // 
+            txtPassword.Location = new Point(196, 252);
+            txtPassword.Name = "txtPassword";
+            txtPassword.PasswordChar = '*';
+            txtPassword.Size = new Size(257, 31);
+            txtPassword.TabIndex = 3;
+            // 
             // chkRememberMe
-            this.chkRememberMe.Location = new System.Drawing.Point(20, 225);
-            this.chkRememberMe.Name = "chkRememberMe";
-            this.chkRememberMe.Size = new System.Drawing.Size(209, 29);
-            this.chkRememberMe.TabIndex = 4;
-            this.chkRememberMe.Text = "Remember me";
-
+            // 
+            chkRememberMe.AutoSize = true;
+            chkRememberMe.Location = new Point(230, 486);
+            chkRememberMe.Name = "chkRememberMe";
+            chkRememberMe.Size = new Size(154, 29);
+            chkRememberMe.TabIndex = 4;
+            chkRememberMe.Text = "Remember Me";
+            // 
             // btnLogin
-            this.btnLogin.Location = new System.Drawing.Point(130, 314);
-            this.btnLogin.Name = "btnLogin";
-            this.btnLogin.Size = new System.Drawing.Size(200, 43);
-            this.btnLogin.TabIndex = 5;
-            this.btnLogin.Text = "Sign in";
-
+            // 
+            btnLogin.Location = new Point(250, 326);
+            btnLogin.Name = "btnLogin";
+            btnLogin.Size = new Size(100, 39);
+            btnLogin.TabIndex = 5;
+            btnLogin.Text = "Login";
+            // 
             // lnkForgotPassword
-            this.lnkForgotPassword.LinkColor = System.Drawing.Color.FromArgb(128, 128, 255);
-            this.lnkForgotPassword.Location = new System.Drawing.Point(257, 226);
-            this.lnkForgotPassword.Name = "lnkForgotPassword";
-            this.lnkForgotPassword.Size = new System.Drawing.Size(170, 23);
-            this.lnkForgotPassword.TabIndex = 6;
-            this.lnkForgotPassword.TabStop = true;
-            this.lnkForgotPassword.Text = "Forgot password?";
-
+            // 
+            lnkForgotPassword.AutoSize = true;
+            lnkForgotPassword.DisabledLinkColor = Color.Black;
+            lnkForgotPassword.LinkColor = Color.Black;
+            lnkForgotPassword.Location = new Point(214, 397);
+            lnkForgotPassword.Name = "lnkForgotPassword";
+            lnkForgotPassword.Size = new Size(154, 25);
+            lnkForgotPassword.TabIndex = 6;
+            lnkForgotPassword.TabStop = true;
+            lnkForgotPassword.Text = "Forgot Password?";
+            // 
             // lnkSignUp
-            this.lnkSignUp.LinkColor = System.Drawing.Color.FromArgb(128, 128, 255);
-            this.lnkSignUp.Location = new System.Drawing.Point(287, 380);
-            this.lnkSignUp.Name = "lnkSignUp";
-            this.lnkSignUp.Size = new System.Drawing.Size(90, 23);
-            this.lnkSignUp.TabIndex = 7;
-            this.lnkSignUp.TabStop = true;
-            this.lnkSignUp.Text = "Sign up";
-
-            // label1
-            this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(-1, 0);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(155, 25);
-            this.label1.TabIndex = 8;
-            this.label1.Text = "Together Culture";
-
-            // label2
-            this.label2.AutoSize = true;
-            this.label2.ForeColor = System.Drawing.Color.FromArgb(255, 224, 192);
-            this.label2.Location = new System.Drawing.Point(3, 25);
-            this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(104, 25);
-            this.label2.TabIndex = 9;
-            this.label2.Text = "Cambridge";
-
-            // label3
-            this.label3.AutoSize = true;
-            this.label3.Location = new System.Drawing.Point(74, 380);
-            this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(218, 25);
-            this.label3.TabIndex = 10;
-            this.label3.Text = "Don't have an account?";
-
+            // 
+            lnkSignUp.AutoSize = true;
+            lnkSignUp.DisabledLinkColor = Color.Black;
+            lnkSignUp.LinkColor = Color.Black;
+            lnkSignUp.Location = new Point(261, 443);
+            lnkSignUp.Name = "lnkSignUp";
+            lnkSignUp.Size = new Size(75, 25);
+            lnkSignUp.TabIndex = 7;
+            lnkSignUp.TabStop = true;
+            lnkSignUp.Text = "Sign Up";
+            // 
             // LoginForm
-            this.AutoScaleDimensions = new System.Drawing.SizeF(10F, 25F);
-            this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.BackColor = System.Drawing.Color.FromArgb(128, 128, 255);
-            this.ClientSize = new System.Drawing.Size(1280, 720);
-            this.Controls.Add(this.pnlContainer);
-            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
-            this.Name = "LoginForm";
-            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
-            this.Text = "Login Form";
-            this.Load += new System.EventHandler(this.LoginForm_Load);
-            this.pnlContainer.ResumeLayout(false);
-            this.pnlContainer.PerformLayout();
-            this.ResumeLayout(false);
+            // 
+            BackColor = Color.FromArgb(128, 128, 255);
+            ClientSize = new Size(1937, 942);
+            Controls.Add(pnlContainer);
+            FormBorderStyle = FormBorderStyle.None;
+            Name = "LoginForm";
+            StartPosition = FormStartPosition.CenterScreen;
+            Text = "Login Form";
+            Load += LoginForm_Load_1;
+            pnlContainer.ResumeLayout(false);
+            pnlContainer.PerformLayout();
+            ResumeLayout(false);
         }
-
-        #endregion
     }
 }
-
 
