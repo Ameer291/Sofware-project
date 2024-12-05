@@ -1,8 +1,12 @@
 ﻿using Microsoft.Data.SqlClient;
 using Sofware_project;
 using System;
+using System.Data.Common;
+using System.Data;
 using System.Drawing;
 using System.Windows.Forms;
+using System.Net;
+using static System.Windows.Forms.VisualStyles.VisualStyleElement;
 
 namespace Sofware_project
 {
@@ -25,20 +29,55 @@ namespace Sofware_project
         private void LoadRememberedUsername()
         {
             // Load remembered username if the "Remember Me" option was previously selected
-            if (Software_project.Properties.Settings.Default.RememberMe)
+            //if (Software_project.Properties.Settings.Default.RememberMe)
+            //{
+            //    txtUsername.Text = Software_project.Properties.Settings.Default.Username;
+            //    chkRememberMe.Checked = true;
+            //}
+        }
+        private void UpdateCurrentUser(string username)
+        {
+            DBConnection DBcon = new DBConnection();
+            SqlConnection sqlcon = DBcon.ConnectDB();
+            var query = "SELECT * FROM Users WHERE UserName = @Username";
+            try
             {
-                txtUsername.Text = Software_project.Properties.Settings.Default.Username;
-                chkRememberMe.Checked = true;
+                using (var cmd = new SqlCommand(query, sqlcon))
+                {
+                    cmd.Parameters.Add("@Username", SqlDbType.VarChar);
+                    cmd.Parameters["@Username"].Value = username;
+                    using (SqlDataReader reader = cmd.ExecuteReader())
+                    {
+                        while (reader.Read())
+                        {
+                            String firstname = reader.IsDBNull(1) ? "" : reader.GetString(1);
+                            String lastname = reader.IsDBNull(8) ? "" : reader.GetString(8);
+                            String email = reader.IsDBNull(2) ? "" : reader.GetString(2);
+                            String gender = reader.IsDBNull(11) ? "" : reader.GetString(11);
+                            String phonenumber = reader.IsDBNull(13) ? "" : reader.GetString(13);
+                            String address = reader.IsDBNull(13) ? "" : reader.GetString(12);
+                            String password = reader.IsDBNull(3) ? "" : reader.GetString(3);
+
+
+                            User CurrentUsrObj = new Member( firstname, lastname, email, phonenumber,
+                                                             gender, address, username, password);
+                            LoginUser.GetInstance.SetCurrentUser(CurrentUsrObj);
+                        }
+                    }
+                }
+            }
+            catch (Exception)
+            {
+                MessageBox.Show("Error connecting to database", "Database Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
         }
-
         private void btnLogin_Click(object sender, EventArgs e)
         {
-            string connectionString = @"Data Source=(LocalDB)\MSSQLLocalDB;AttachDbFilename=C:\USERS\1002F\SOURCE\REPOS\SOFTWARE PROJECT\DATA\DB_TOGETHERCULTURE.MDF;Integrated Security=True";
+            string connectionString = @"Data Source=(LocalDB)\MSSQLLocalDB;AttachDbFilename=C:\mithra\gouri2024\togetherculture\Sofware-project\data\db_togetherculture.mdf;Integrated Security=True";
             if (IsValidUser(txtUsername.Text.Trim(), txtPassword.Text, connectionString))
             {
                 MessageBox.Show("Login Successful!", "Success", MessageBoxButtons.OK, MessageBoxIcon.Information);
-
+                UpdateCurrentUser(txtUsername.Text.Trim());
                 // Save username for "Remember Me" functionality
                 if (chkRememberMe.Checked)
                 {
@@ -62,20 +101,20 @@ namespace Sofware_project
                 MessageBox.Show("Invalid credentials, please try again.", "Login Failed", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
         }
-        private void btnLogin_Click(object sender, EventArgs e)
-        {
-            if (IsValidUser(txtUsername.Text.Trim(), txtPassword.Text))
-            {
-                this.Hide();
-                DashboardForm dashboard = new DashboardForm();
-                dashboard.Show();
-                dashboard.FormClosed += (s, args) => this.Close(); // Close LoginForm when Dashboard is closed
-            }
-            else
-            {
-                MessageBox.Show("Invalid credentials, please try again.");
-            }
-        }
+        //private void btnLogin_Click(object sender, EventArgs e)
+        //{
+        //    if (IsValidUser(txtUsername.Text.Trim(), txtPassword.Text))
+        //    {
+        //        this.Hide();
+        //        DashboardForm dashboard = new DashboardForm();
+        //        dashboard.Show();
+        //        dashboard.FormClosed += (s, args) => this.Close(); // Close LoginForm when Dashboard is closed
+        //    }
+        //    else
+        //    {
+        //        MessageBox.Show("Invalid credentials, please try again.");
+        //    }
+        //}
 
 
         private bool IsValidUser(string username, string password, string connectionString)
@@ -132,10 +171,6 @@ namespace Sofware_project
 
         }
 
-        private void btnLogin_Click_1(object sender, EventArgs e)
-        {
-
-        }
 
         private void lblUsername_Click(object sender, EventArgs e)
         {
@@ -148,6 +183,16 @@ namespace Sofware_project
         }
 
         private void LoginForm_Load_1(object sender, EventArgs e)
+        {
+
+        }
+
+        private void btnLogin_Click_1(object sender, EventArgs e)
+        {
+
+        }
+
+        private void txtUsername_TextChanged(object sender, EventArgs e)
         {
 
         }

@@ -10,9 +10,9 @@ namespace Sofware_project
 
     {
         public Member(string firstname, string lastname, string email, string phonenumber,
-            string gender, string address, DateTime DOB, string username) :
+            string gender, string address, string username, string Password) :
                    base( firstname, lastname, email, phonenumber,
-             gender, address, DOB, username )
+             gender, address,username, Password)
         { }
     }
 
