@@ -19,7 +19,6 @@ namespace Sofware_project
 
         private void EventsManagement_Load(object sender, EventArgs e)
         {
-
         }
 
         private void label1_Click(object sender, EventArgs e)
@@ -73,6 +72,11 @@ namespace Sofware_project
         }
 
         private void eventtype1_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void panel3_Paint(object sender, PaintEventArgs e)
         {
 
         }
