@@ -58,8 +58,8 @@ namespace Sofware_project
                             String phonenumber = reader.IsDBNull(13) ? "" : reader.GetString(13);
                             String address = reader.IsDBNull(13) ? "" : reader.GetString(12);
                             String password = reader.IsDBNull(3) ? "" : reader.GetString(3);
-                            if( !reader.IsDBNull(10))
-                                DOB = (DateTime)reader.GetDateTime(10);
+                            // if( !reader.IsDBNull(10))
+                              // DOB = (DateTime)reader.GetDateTime(10);
 
 
                             User CurrentUsrObj = new Member( firstname, lastname, email, phonenumber,
