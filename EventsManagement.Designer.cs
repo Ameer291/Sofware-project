@@ -29,10 +29,13 @@
         private void InitializeComponent()
         {
             panel1 = new Panel();
+            totalnum_events = new Label();
             label1 = new Label();
             panel2 = new Panel();
+            activenum_events = new Label();
             label2 = new Label();
             panel3 = new Panel();
+            totalnum_attendees = new Label();
             label3 = new Label();
             panel4 = new Panel();
             panel11 = new Panel();
@@ -66,6 +69,7 @@
             panel9 = new Panel();
             panel10 = new Panel();
             panel12 = new Panel();
+            eventdate1 = new Label();
             eventdelete1 = new Button();
             eventedit1 = new Button();
             eventorganiser1 = new Label();
@@ -78,7 +82,6 @@
             eventname1 = new Label();
             label9 = new Label();
             panel5 = new Panel();
-            eventdate1 = new Label();
             panel1.SuspendLayout();
             panel2.SuspendLayout();
             panel3.SuspendLayout();
@@ -91,11 +94,21 @@
             // panel1
             // 
             panel1.BorderStyle = BorderStyle.Fixed3D;
+            panel1.Controls.Add(totalnum_events);
             panel1.Controls.Add(label1);
             panel1.Location = new Point(37, 40);
             panel1.Name = "panel1";
             panel1.Size = new Size(214, 120);
             panel1.TabIndex = 0;
+            // 
+            // totalnum_events
+            // 
+            totalnum_events.AutoSize = true;
+            totalnum_events.Location = new Point(26, 48);
+            totalnum_events.Name = "totalnum_events";
+            totalnum_events.Size = new Size(63, 20);
+            totalnum_events.TabIndex = 1;
+            totalnum_events.Text = "number";
             // 
             // label1
             // 
@@ -111,11 +124,21 @@
             // panel2
             // 
             panel2.BorderStyle = BorderStyle.Fixed3D;
+            panel2.Controls.Add(activenum_events);
             panel2.Controls.Add(label2);
             panel2.Location = new Point(317, 40);
             panel2.Name = "panel2";
             panel2.Size = new Size(214, 120);
             panel2.TabIndex = 1;
+            // 
+            // activenum_events
+            // 
+            activenum_events.AutoSize = true;
+            activenum_events.Location = new Point(14, 48);
+            activenum_events.Name = "activenum_events";
+            activenum_events.Size = new Size(63, 20);
+            activenum_events.TabIndex = 5;
+            activenum_events.Text = "number";
             // 
             // label2
             // 
@@ -130,11 +153,22 @@
             // panel3
             // 
             panel3.BorderStyle = BorderStyle.Fixed3D;
+            panel3.Controls.Add(totalnum_attendees);
             panel3.Controls.Add(label3);
             panel3.Location = new Point(590, 40);
             panel3.Name = "panel3";
             panel3.Size = new Size(214, 120);
             panel3.TabIndex = 1;
+            panel3.Paint += panel3_Paint;
+            // 
+            // totalnum_attendees
+            // 
+            totalnum_attendees.AutoSize = true;
+            totalnum_attendees.Location = new Point(20, 48);
+            totalnum_attendees.Name = "totalnum_attendees";
+            totalnum_attendees.Size = new Size(63, 20);
+            totalnum_attendees.TabIndex = 4;
+            totalnum_attendees.Text = "number";
             // 
             // label3
             // 
@@ -305,7 +339,7 @@
             eventstatus2.BackColor = Color.LemonChiffon;
             eventstatus2.Font = new Font("Segoe UI Semibold", 10.2F, FontStyle.Bold, GraphicsUnit.Point, 0);
             eventstatus2.ForeColor = Color.Goldenrod;
-            eventstatus2.Location = new Point(129, 175);
+            eventstatus2.Location = new Point(127, 175);
             eventstatus2.Name = "eventstatus2";
             eventstatus2.Size = new Size(112, 23);
             eventstatus2.TabIndex = 6;
@@ -324,11 +358,13 @@
             // 
             // event_description2
             // 
+            event_description2.BackColor = SystemColors.Window;
             event_description2.BorderStyle = BorderStyle.None;
             event_description2.Location = new Point(-2, 112);
             event_description2.Multiline = true;
             event_description2.Name = "event_description2";
-            event_description2.Size = new Size(236, 50);
+            event_description2.ReadOnly = true;
+            event_description2.Size = new Size(241, 50);
             event_description2.TabIndex = 4;
             event_description2.TextChanged += textBox1_TextChanged;
             // 
@@ -463,11 +499,13 @@
             // 
             // event_description3
             // 
+            event_description3.BackColor = SystemColors.Window;
             event_description3.BorderStyle = BorderStyle.None;
             event_description3.Location = new Point(-2, 112);
             event_description3.Multiline = true;
             event_description3.Name = "event_description3";
-            event_description3.Size = new Size(236, 50);
+            event_description3.ReadOnly = true;
+            event_description3.Size = new Size(241, 50);
             event_description3.TabIndex = 5;
             // 
             // eventname3
@@ -519,6 +557,16 @@
             panel12.Size = new Size(241, 408);
             panel12.TabIndex = 6;
             panel12.Paint += panel12_Paint;
+            // 
+            // eventdate1
+            // 
+            eventdate1.AutoSize = true;
+            eventdate1.Font = new Font("Segoe UI", 10.2F, FontStyle.Regular, GraphicsUnit.Point, 0);
+            eventdate1.Location = new Point(11, 210);
+            eventdate1.Name = "eventdate1";
+            eventdate1.Size = new Size(53, 23);
+            eventdate1.TabIndex = 14;
+            eventdate1.Text = "date1";
             // 
             // eventdelete1
             // 
@@ -601,10 +649,12 @@
             // 
             // event_description1
             // 
+            event_description1.BackColor = SystemColors.Window;
             event_description1.BorderStyle = BorderStyle.None;
             event_description1.Location = new Point(-2, 112);
             event_description1.Multiline = true;
             event_description1.Name = "event_description1";
+            event_description1.ReadOnly = true;
             event_description1.Size = new Size(241, 50);
             event_description1.TabIndex = 3;
             // 
@@ -616,9 +666,9 @@
             eventtype1.ForeColor = SystemColors.HotTrack;
             eventtype1.Location = new Point(9, 175);
             eventtype1.Name = "eventtype1";
-            eventtype1.Size = new Size(99, 23);
+            eventtype1.Size = new Size(104, 23);
             eventtype1.TabIndex = 2;
-            eventtype1.Text = "event type1";
+            eventtype1.Text = "event type 1";
             eventtype1.Click += eventtype1_Click;
             // 
             // eventname1
@@ -649,23 +699,13 @@
             panel5.Size = new Size(241, 73);
             panel5.TabIndex = 11;
             // 
-            // eventdate1
-            // 
-            eventdate1.AutoSize = true;
-            eventdate1.Font = new Font("Segoe UI", 10.2F, FontStyle.Regular, GraphicsUnit.Point, 0);
-            eventdate1.Location = new Point(11, 210);
-            eventdate1.Name = "eventdate1";
-            eventdate1.Size = new Size(53, 23);
-            eventdate1.TabIndex = 14;
-            eventdate1.Text = "date1";
-            // 
             // EventsManagement
             // 
             AutoScaleDimensions = new SizeF(9F, 20F);
             AutoScaleMode = AutoScaleMode.Font;
             AutoSize = true;
             BackColor = SystemColors.Window;
-            ClientSize = new Size(885, 689);
+            ClientSize = new Size(885, 711);
             Controls.Add(panel5);
             Controls.Add(panel12);
             Controls.Add(panel10);
@@ -715,7 +755,7 @@
         private Panel panel9;
         private Panel panel10;
         private Panel panel11;
-        private Label label4;
+        private Label totalnum_events;
         private Label eventname1;
         private Label eventname2;
         private Label eventname3;
@@ -734,7 +774,7 @@
         //private Label eventdate1;
         //private Label eventstatus1;
         private TextBox textBox1;
-        private Label label7;
+        private Label activenum_events;
         //private Label eventname1;
         private Label label9;
         private Label eventdate2;
@@ -758,5 +798,6 @@
         private Button eventdelete3;
         private Button eventdelete1;
         private Label eventdate1;
+        private Label totalnum_attendees;
     }
 }
