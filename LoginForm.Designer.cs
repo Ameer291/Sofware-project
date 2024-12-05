@@ -81,6 +81,7 @@
             txtUsername.Name = "txtUsername";
             txtUsername.Size = new Size(257, 31);
             txtUsername.TabIndex = 2;
+            txtUsername.TextChanged += txtUsername_TextChanged;
             // 
             // txtPassword
             // 
@@ -106,6 +107,7 @@
             btnLogin.Size = new Size(100, 39);
             btnLogin.TabIndex = 5;
             btnLogin.Text = "Login";
+            btnLogin.Click += btnLogin_Click_1;
             // 
             // lnkForgotPassword
             // 

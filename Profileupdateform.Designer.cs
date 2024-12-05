@@ -60,9 +60,10 @@
             profileimage.BorderStyle = BorderStyle.FixedSingle;
             profileimage.ErrorImage = (Image)resources.GetObject("profileimage.ErrorImage");
             profileimage.Image = Properties.Resources._118174;
-            profileimage.Location = new Point(12, 12);
+            profileimage.Location = new Point(15, 15);
+            profileimage.Margin = new Padding(4);
             profileimage.Name = "profileimage";
-            profileimage.Size = new Size(109, 94);
+            profileimage.Size = new Size(136, 117);
             profileimage.SizeMode = PictureBoxSizeMode.StretchImage;
             profileimage.TabIndex = 0;
             profileimage.TabStop = false;
@@ -74,9 +75,10 @@
             editprofilebutton.FlatAppearance.BorderSize = 0;
             editprofilebutton.FlatStyle = FlatStyle.Flat;
             editprofilebutton.Font = new Font("Segoe UI Semibold", 10.2F, FontStyle.Bold, GraphicsUnit.Point, 0);
-            editprofilebutton.Location = new Point(12, 121);
+            editprofilebutton.Location = new Point(15, 151);
+            editprofilebutton.Margin = new Padding(4);
             editprofilebutton.Name = "editprofilebutton";
-            editprofilebutton.Size = new Size(109, 38);
+            editprofilebutton.Size = new Size(136, 48);
             editprofilebutton.TabIndex = 1;
             editprofilebutton.Text = "Edit photo";
             editprofilebutton.UseVisualStyleBackColor = false;
@@ -101,68 +103,78 @@
             panel1.Controls.Add(label3);
             panel1.Controls.Add(label2);
             panel1.Controls.Add(label1);
-            panel1.Location = new Point(156, 12);
+            panel1.Location = new Point(195, 15);
+            panel1.Margin = new Padding(4);
             panel1.Name = "panel1";
-            panel1.Size = new Size(600, 363);
+            panel1.Size = new Size(749, 453);
             panel1.TabIndex = 2;
             panel1.Paint += panel1_Paint;
             // 
             // address
             // 
-            address.Location = new Point(134, 303);
+            address.Location = new Point(168, 379);
+            address.Margin = new Padding(4);
             address.Name = "address";
-            address.Size = new Size(437, 27);
+            address.Size = new Size(545, 31);
             address.TabIndex = 17;
+            address.TextChanged += address_TextChanged;
             // 
             // phonenumber
             // 
-            phonenumber.Location = new Point(134, 262);
+            phonenumber.Location = new Point(168, 328);
+            phonenumber.Margin = new Padding(4);
             phonenumber.Name = "phonenumber";
-            phonenumber.Size = new Size(437, 27);
+            phonenumber.Size = new Size(545, 31);
             phonenumber.TabIndex = 16;
             // 
             // email
             // 
-            email.Location = new Point(134, 224);
+            email.Location = new Point(168, 280);
+            email.Margin = new Padding(4);
             email.Name = "email";
-            email.Size = new Size(437, 27);
+            email.Size = new Size(545, 31);
             email.TabIndex = 15;
             email.TextChanged += textBox7_TextChanged;
             // 
             // username
             // 
-            username.Location = new Point(134, 179);
+            username.Location = new Point(168, 224);
+            username.Margin = new Padding(4);
             username.Name = "username";
             username.ReadOnly = true;
-            username.Size = new Size(437, 27);
+            username.Size = new Size(545, 31);
             username.TabIndex = 13;
             // 
             // gender
             // 
-            gender.Location = new Point(134, 139);
+            gender.Location = new Point(168, 174);
+            gender.Margin = new Padding(4);
             gender.Name = "gender";
-            gender.Size = new Size(437, 27);
+            gender.Size = new Size(545, 31);
             gender.TabIndex = 12;
             // 
             // DOB
             // 
-            DOB.Location = new Point(134, 97);
+            DOB.Location = new Point(168, 121);
+            DOB.Margin = new Padding(4);
             DOB.Name = "DOB";
-            DOB.Size = new Size(437, 27);
+            DOB.Size = new Size(545, 31);
             DOB.TabIndex = 11;
             // 
             // lastname
             // 
-            lastname.Location = new Point(134, 59);
+            lastname.Location = new Point(168, 74);
+            lastname.Margin = new Padding(4);
             lastname.Name = "lastname";
-            lastname.Size = new Size(437, 27);
+            lastname.Size = new Size(545, 31);
             lastname.TabIndex = 10;
             // 
             // firstname
             // 
-            firstname.Location = new Point(134, 20);
+            firstname.Location = new Point(168, 25);
+            firstname.Margin = new Padding(4);
             firstname.Name = "firstname";
-            firstname.Size = new Size(437, 27);
+            firstname.Size = new Size(545, 31);
             firstname.TabIndex = 9;
             firstname.TextChanged += firstname_TextChanged;
             // 
@@ -170,9 +182,10 @@
             // 
             label9.AutoSize = true;
             label9.Font = new Font("Segoe UI Semibold", 10.2F, FontStyle.Bold, GraphicsUnit.Point, 0);
-            label9.Location = new Point(17, 303);
+            label9.Location = new Point(21, 379);
+            label9.Margin = new Padding(4, 0, 4, 0);
             label9.Name = "label9";
-            label9.Size = new Size(70, 23);
+            label9.Size = new Size(90, 30);
             label9.TabIndex = 8;
             label9.Text = "Address";
             // 
@@ -180,9 +193,10 @@
             // 
             label8.AutoSize = true;
             label8.Font = new Font("Segoe UI Semibold", 10.2F, FontStyle.Bold, GraphicsUnit.Point, 0);
-            label8.Location = new Point(17, 262);
+            label8.Location = new Point(21, 328);
+            label8.Margin = new Padding(4, 0, 4, 0);
             label8.Name = "label8";
-            label8.Size = new Size(59, 23);
+            label8.Size = new Size(73, 30);
             label8.TabIndex = 7;
             label8.Text = "Phone";
             // 
@@ -190,9 +204,10 @@
             // 
             label7.AutoSize = true;
             label7.Font = new Font("Segoe UI Semibold", 10.2F, FontStyle.Bold, GraphicsUnit.Point, 0);
-            label7.Location = new Point(17, 224);
+            label7.Location = new Point(21, 280);
+            label7.Margin = new Padding(4, 0, 4, 0);
             label7.Name = "label7";
-            label7.Size = new Size(51, 23);
+            label7.Size = new Size(64, 30);
             label7.TabIndex = 6;
             label7.Text = "Email";
             // 
@@ -200,9 +215,10 @@
             // 
             label5.AutoSize = true;
             label5.Font = new Font("Segoe UI Semibold", 10.2F, FontStyle.Bold, GraphicsUnit.Point, 0);
-            label5.Location = new Point(17, 179);
+            label5.Location = new Point(21, 224);
+            label5.Margin = new Padding(4, 0, 4, 0);
             label5.Name = "label5";
-            label5.Size = new Size(87, 23);
+            label5.Size = new Size(109, 30);
             label5.TabIndex = 4;
             label5.Text = "Username";
             label5.Click += label5_Click;
@@ -211,9 +227,10 @@
             // 
             label4.AutoSize = true;
             label4.Font = new Font("Segoe UI Semibold", 10.2F, FontStyle.Bold, GraphicsUnit.Point, 0);
-            label4.Location = new Point(17, 139);
+            label4.Location = new Point(21, 174);
+            label4.Margin = new Padding(4, 0, 4, 0);
             label4.Name = "label4";
-            label4.Size = new Size(66, 23);
+            label4.Size = new Size(83, 30);
             label4.TabIndex = 3;
             label4.Text = "Gender";
             // 
@@ -221,9 +238,10 @@
             // 
             label3.AutoSize = true;
             label3.Font = new Font("Segoe UI Semibold", 10.2F, FontStyle.Bold, GraphicsUnit.Point, 0);
-            label3.Location = new Point(17, 97);
+            label3.Location = new Point(21, 121);
+            label3.Margin = new Padding(4, 0, 4, 0);
             label3.Name = "label3";
-            label3.Size = new Size(108, 23);
+            label3.Size = new Size(137, 30);
             label3.TabIndex = 2;
             label3.Text = "Date of birth";
             // 
@@ -231,9 +249,10 @@
             // 
             label2.AutoSize = true;
             label2.Font = new Font("Segoe UI Semibold", 10.2F, FontStyle.Bold, GraphicsUnit.Point, 0);
-            label2.Location = new Point(17, 59);
+            label2.Location = new Point(21, 74);
+            label2.Margin = new Padding(4, 0, 4, 0);
             label2.Name = "label2";
-            label2.Size = new Size(88, 23);
+            label2.Size = new Size(110, 30);
             label2.TabIndex = 1;
             label2.Text = "Last name";
             // 
@@ -241,9 +260,10 @@
             // 
             label1.AutoSize = true;
             label1.Font = new Font("Segoe UI Semibold", 10.2F, FontStyle.Bold, GraphicsUnit.Point, 0);
-            label1.Location = new Point(17, 20);
+            label1.Location = new Point(21, 25);
+            label1.Margin = new Padding(4, 0, 4, 0);
             label1.Name = "label1";
-            label1.Size = new Size(90, 23);
+            label1.Size = new Size(113, 30);
             label1.TabIndex = 0;
             label1.Text = "First name";
             // 
@@ -254,12 +274,14 @@
             button1.FlatAppearance.BorderSize = 0;
             button1.FlatStyle = FlatStyle.Flat;
             button1.Font = new Font("Segoe UI Semibold", 10.2F, FontStyle.Bold, GraphicsUnit.Point, 0);
-            button1.Location = new Point(526, 402);
+            button1.Location = new Point(658, 502);
+            button1.Margin = new Padding(4);
             button1.Name = "button1";
-            button1.Size = new Size(107, 36);
+            button1.Size = new Size(134, 45);
             button1.TabIndex = 3;
             button1.Text = "Save";
             button1.UseVisualStyleBackColor = false;
+            button1.Click += button1_Click;
             // 
             // changepswdbutton
             // 
@@ -268,13 +290,14 @@
             changepswdbutton.FlatAppearance.BorderSize = 0;
             changepswdbutton.FlatStyle = FlatStyle.Flat;
             changepswdbutton.Font = new Font("Segoe UI", 10.2F, FontStyle.Underline, GraphicsUnit.Point, 0);
-            changepswdbutton.Location = new Point(363, 388);
+            changepswdbutton.Location = new Point(443, 484);
+            changepswdbutton.Margin = new Padding(4);
             changepswdbutton.Name = "changepswdbutton";
-            changepswdbutton.Size = new Size(157, 64);
+            changepswdbutton.Size = new Size(196, 80);
             changepswdbutton.TabIndex = 4;
             changepswdbutton.Text = "Change password";
             changepswdbutton.UseVisualStyleBackColor = false;
-            changepswdbutton.Click += button2_Click;
+            changepswdbutton.Click += changepswdbutton_Click;
             // 
             // button3
             // 
@@ -283,25 +306,27 @@
             button3.FlatAppearance.BorderSize = 0;
             button3.FlatStyle = FlatStyle.Flat;
             button3.Font = new Font("Segoe UI Semibold", 10.2F, FontStyle.Bold, GraphicsUnit.Point, 0);
-            button3.Location = new Point(649, 402);
+            button3.Location = new Point(811, 502);
+            button3.Margin = new Padding(4);
             button3.Name = "button3";
-            button3.Size = new Size(107, 36);
+            button3.Size = new Size(134, 45);
             button3.TabIndex = 11;
             button3.Text = "Cancel";
             button3.UseVisualStyleBackColor = false;
             // 
             // Profileupdateform
             // 
-            AutoScaleDimensions = new SizeF(8F, 20F);
+            AutoScaleDimensions = new SizeF(10F, 25F);
             AutoScaleMode = AutoScaleMode.Font;
             BackColor = SystemColors.Window;
-            ClientSize = new Size(796, 467);
+            ClientSize = new Size(995, 584);
             Controls.Add(button3);
             Controls.Add(changepswdbutton);
             Controls.Add(button1);
             Controls.Add(panel1);
             Controls.Add(editprofilebutton);
             Controls.Add(profileimage);
+            Margin = new Padding(4);
             Name = "Profileupdateform";
             Text = "Profile";
             Load += Profileupdateform_Load;

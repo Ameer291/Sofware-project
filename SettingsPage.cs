@@ -15,8 +15,15 @@ namespace Sofware_project
         public SettingsPage()
         {
             InitializeComponent();
-        }
+            Updateuserdetails();
 
+        }
+        private void Updateuserdetails()
+        {
+            User currentuser = LoginUser.GetInstance.GetCurrentUser();
+            member_name.Text = currentuser.GetUsername();
+
+        }
         private void SettingsPage_Load(object sender, EventArgs e)
         {
 
@@ -94,6 +101,11 @@ namespace Sofware_project
         }
 
         private void panel1_Paint_1(object sender, PaintEventArgs e)
+        {
+
+        }
+
+        private void member_name_Click(object sender, EventArgs e)
         {
 
         }
