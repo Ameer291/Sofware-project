@@ -50,6 +50,7 @@ namespace Sofware_project
                     {
                         while (reader.Read())
                         {
+                            DateTime DOB = DateTime.MinValue;
                             String firstname = reader.IsDBNull(1) ? "" : reader.GetString(1);
                             String lastname = reader.IsDBNull(8) ? "" : reader.GetString(8);
                             String email = reader.IsDBNull(2) ? "" : reader.GetString(2);
@@ -57,10 +58,13 @@ namespace Sofware_project
                             String phonenumber = reader.IsDBNull(13) ? "" : reader.GetString(13);
                             String address = reader.IsDBNull(13) ? "" : reader.GetString(12);
                             String password = reader.IsDBNull(3) ? "" : reader.GetString(3);
+                            if( !reader.IsDBNull(10))
+                                DOB = (DateTime)reader.GetDateTime(10);
 
 
                             User CurrentUsrObj = new Member( firstname, lastname, email, phonenumber,
                                                              gender, address, username, password);
+                            CurrentUsrObj.SetDOB( DOB);
                             LoginUser.GetInstance.SetCurrentUser(CurrentUsrObj);
                         }
                     }
@@ -120,24 +124,23 @@ namespace Sofware_project
         private bool IsValidUser(string username, string password, string connectionString)
         {
             bool isValid = false;
-            using (var conn = new SqlConnection(connectionString))
+            DBConnection DBcon = new DBConnection();
+            SqlConnection conn = DBcon.ConnectDB();
+            try
             {
-                try
+
+                var query = "SELECT COUNT(1) FROM Users WHERE Username = @Username AND Password = @Password";
+                using (var cmd = new SqlCommand(query, conn))
                 {
-                    conn.Open();
-                    var query = "SELECT COUNT(1) FROM Users WHERE Username = @Username AND Password = @Password";
-                    using (var cmd = new SqlCommand(query, conn))
-                    {
-                        cmd.Parameters.AddWithValue("@Username", username);
-                        cmd.Parameters.AddWithValue("@Password", password);
-                        int count = Convert.ToInt32(cmd.ExecuteScalar());
-                        isValid = count == 1;
-                    }
+                    cmd.Parameters.AddWithValue("@Username", username);
+                    cmd.Parameters.AddWithValue("@Password", password);
+                    int count = Convert.ToInt32(cmd.ExecuteScalar());
+                    isValid = count == 1;
                 }
-                catch (Exception ex)
-                {
-                    MessageBox.Show("Database connection error: " + ex.Message, "Login Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
-                }
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show("Database connection error: " + ex.Message, "Login Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
             return isValid;
         }

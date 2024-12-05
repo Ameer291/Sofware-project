@@ -50,50 +50,43 @@ namespace Sofware_project
 
         private bool RegisterUser(string username, string password, string email)
         {
-            string connectionString = @"Data Source=(LocalDB)\MSSQLLocalDB;AttachDbFilename=C:\USERS\1002F\SOURCE\REPOS\SOFTWARE PROJECT\DATA\DB_TOGETHERCULTURE.MDF;Integrated Security=True";
-            using (var conn = new SqlConnection(connectionString))
+            DBConnection DBcon = new DBConnection();
+            SqlConnection conn = DBcon.ConnectDB();
+            try
             {
-                try
+                var query = "INSERT INTO Users (Username, Password, Email) VALUES (@Username, @Password, @Email)";
+                using (var cmd = new SqlCommand(query, conn))
                 {
-                    conn.Open();
-                    var query = "INSERT INTO Users (Username, Password, Email) VALUES (@Username, @Password, @Email)";
-                    using (var cmd = new SqlCommand(query, conn))
-                    {
-                        cmd.Parameters.AddWithValue("@Username", username);
-                        cmd.Parameters.AddWithValue("@Password", password);
-                        cmd.Parameters.AddWithValue("@Email", email);
-                        return cmd.ExecuteNonQuery() > 0;
-                    }
-                }
-                catch (Exception ex)
-                {
-                    MessageBox.Show("Error connecting to database: " + ex.Message, "Database Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
-                    return false;
+                    cmd.Parameters.AddWithValue("@Username", username);
+                    cmd.Parameters.AddWithValue("@Password", password);
+                    cmd.Parameters.AddWithValue("@Email", email);
+                    return cmd.ExecuteNonQuery() > 0;
                 }
             }
+            catch (Exception ex)
+            {
+                MessageBox.Show("Error connecting to database: " + ex.Message, "Database Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                return false;
+            }
         }
-
         private bool CheckIfUsernameExists(string username)
         {
-            string connectionString = @"Data Source=(LocalDB)\MSSQLLocalDB;AttachDbFilename=C:\USERS\1002F\SOURCE\REPOS\SOFTWARE PROJECT\DATA\DB_TOGETHERCULTURE.MDF;Integrated Security=True";
-            using (var conn = new SqlConnection(connectionString))
+            DBConnection DBcon = new DBConnection();
+            SqlConnection conn = DBcon.ConnectDB();
+            try
             {
-                try
+                var query = "SELECT COUNT(1) FROM Users WHERE Username = @Username";
+                using (var cmd = new SqlCommand(query, conn))
                 {
-                    conn.Open();
-                    var query = "SELECT COUNT(1) FROM Users WHERE Username = @Username";
-                    using (var cmd = new SqlCommand(query, conn))
-                    {
-                        cmd.Parameters.AddWithValue("@Username", username);
-                        int count = Convert.ToInt32(cmd.ExecuteScalar());
-                        return count > 0;
-                    }
+                    cmd.Parameters.AddWithValue("@Username", username);
+                    int count = Convert.ToInt32(cmd.ExecuteScalar());
+                    return count > 0;
                 }
-                catch (Exception)
-                {
-                    MessageBox.Show("Error connecting to database", "Database Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
-                    return false;
-                }
+            }
+            catch (Exception)
+            {
+                MessageBox.Show("Error connecting to database", "Database Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                return false;
             }
         }
 
@@ -108,6 +101,11 @@ namespace Sofware_project
         }
 
         private void txtPassword_TextChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void txtUsername_TextChanged(object sender, EventArgs e)
         {
 
         }

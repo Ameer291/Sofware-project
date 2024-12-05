@@ -66,10 +66,13 @@ namespace Sofware_project
                     cmd.Parameters.AddWithValue("@Address", CurrentUser.GetAddress());
                     cmd.Parameters.AddWithValue("@Phone", CurrentUser.GetPhoneNumber());
                     Image img = CurrentUser.GetPhoto();
-                    MemoryStream ms = new MemoryStream();
-                    img.Save(ms, System.Drawing.Imaging.ImageFormat.Jpeg);
-                    byte[] bytes = ms.ToArray();
-                    cmd.Parameters.Add("@Photo", SqlDbType.Binary, 8000).Value = bytes;
+                    if (img != null)
+                    {
+                        MemoryStream ms = new MemoryStream();
+                        img.Save(ms, System.Drawing.Imaging.ImageFormat.Jpeg);
+                        byte[] bytes = ms.ToArray();
+                        cmd.Parameters.Add("@Photo", SqlDbType.Binary, 8000).Value = bytes;
+                    }
                     cmd.ExecuteNonQuery();
                     return true;
                 }

@@ -25,7 +25,8 @@ namespace Sofware_project
             User currentuser = LoginUser.GetInstance.GetCurrentUser();
             firstname.Text = currentuser.GetFirstName();
             lastname.Text = currentuser.GetLastName();
-            DOB.Text = currentuser.GetDOB().ToLongDateString();
+            if( currentuser.GetDOB() != null )
+              DOB.Text = currentuser.GetDOB().ToLongDateString();
             address.Text = currentuser.GetAddress();
             phonenumber.Text = currentuser.GetPhoneNumber();
             email.Text = currentuser.GetEmail();

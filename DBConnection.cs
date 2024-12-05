@@ -12,8 +12,14 @@ namespace Sofware_project
         private SqlConnection conn;
         public SqlConnection ConnectDB()
         {
-            string connectionString = @"Data Source=(LocalDB)\MSSQLLocalDB;AttachDbFilename=C:\mithra\gouri2024\togetherculture\Sofware-project\data\db_togetherculture.mdf;Integrated Security=True";
-            conn = new SqlConnection(connectionString);
+            string connectString = "Data Source=(LocalDB)\\MSSQLLocalDB;" + "Integrated Security=true";
+            SqlConnectionStringBuilder builder = new SqlConnectionStringBuilder(connectString);
+
+            // String cs = AppDomain.CurrentDomain.BaseDirectory;
+            string DBpath = AppDomain.CurrentDomain.BaseDirectory + "db_togetherculture.MDF";
+            builder.AttachDBFilename = DBpath; //@"C:\mithra\gouri2024\software projet\software projet\bin\Debug\net8.0-windows\mydb.MDF";
+            // string connectionString = @"Data Source=(LocalDB)\MSSQLLocalDB;AttachDbFilename=|DBpath|;Integrated Security=True";
+            conn = new SqlConnection(builder.ConnectionString);
             {
                 try
                 {
