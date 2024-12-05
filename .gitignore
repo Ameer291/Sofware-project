@@ -363,3 +363,9 @@ MigrationBackup/
 FodyWeavers.xsd
 /data/db_togetherculture.mdf
 /data/db_togetherculture_log.ldf
+/bin/Debug/net8.0-windows/Sofware project.dll
+/bin/Debug/net8.0-windows/Sofware project.exe
+/obj/Debug/net8.0-windows/Sofware project.AssemblyInfo.cs
+/obj/Debug/net8.0-windows/Sofware project.AssemblyInfoInputs.cache
+/obj/Debug/net8.0-windows/Sofware project.GeneratedMSBuildEditorConfig.editorconfig
+/.gitignore
