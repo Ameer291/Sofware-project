@@ -14,7 +14,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("Sofware project")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+a04150d234d9f374b3c198574fa8bd848b1cc915")]
 [assembly: System.Reflection.AssemblyProductAttribute("Sofware project")]
 [assembly: System.Reflection.AssemblyTitleAttribute("Sofware project")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]
