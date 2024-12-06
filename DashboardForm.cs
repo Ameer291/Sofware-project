@@ -20,12 +20,12 @@ namespace Sofware_project
         private void LoadActiveMembers()
         {
             // This is a placeholder for database interaction.
-            lblActiveMembers.Text = "156 Active Members";  // Example static data
+            //lblActiveMembers.Text = "156 Active Members";  // Example static data
         }
 
         private void LoadThisWeekEvents()
         {
-            lblEventsThisWeek.Text = "12 Events This Week";  // Example static data
+            //l/blEventsThisWeek.Text = "12 Events This Week";  // Example static data
         }
     }
 }
