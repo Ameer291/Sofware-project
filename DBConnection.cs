@@ -36,7 +36,8 @@ namespace Sofware_project
 
             public void CloseDBConnection()
             {
-            }
+                conn.Close();
+        }
 
     }
 }
