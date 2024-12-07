@@ -25,6 +25,7 @@ namespace Sofware_project
         string EventStatus;
         string organiser;
         int eventId;
+        float duration;
         public EventData()
         {
             this.eventId = -1;
@@ -134,14 +135,23 @@ namespace Sofware_project
             return this.EventType;
         }
 
-        public int SetEventId()
+        public void SetEventId( int eventid )
         {
-            return this.eventId;
+            this.eventId = eventid;
         }
         public int GetEventId()
         {
             return this.eventId;
         }
+        public void Setduration( float duration )
+        {
+            this.duration = duration;
+        }
+        public float Getduration()
+        {
+            return this.duration;
+        }
+        
         public int GetEventCount()
         {
             DBConnection DBcon = new DBConnection();
@@ -250,8 +260,8 @@ namespace Sofware_project
                 SqlConnection sqlcon = DBcon.ConnectDB();
                 try
                 {
-                    var query = "INSERT INTO Events ( Description,Title,Location,EventDate,MaxAttendees,EventType,Organiser,CreatedDate) " +
-                        "VALUES (@Description, @Title, @Location, @EventDate, @MaxAttendees,@EventType,@Organiser,@CreatedDate)";
+                    var query = "INSERT INTO Events ( Description,Title,Location,EventDate,MaxAttendees,EventType,Organiser,CreatedDate,Duration) " +
+                        "VALUES (@Description, @Title, @Location, @EventDate, @MaxAttendees,@EventType,@Organiser,@CreatedDate,@Duration)";
                     using (var cmd = new SqlCommand(query, sqlcon))
                     {
                         //cmd.Parameters.AddWithValue("@EventId", this.eventId);
@@ -263,6 +273,8 @@ namespace Sofware_project
                         cmd.Parameters.AddWithValue("@EventType", this.typeofevent);
                         cmd.Parameters.AddWithValue("@Organiser", this.organiser);
                         cmd.Parameters.AddWithValue("@CreatedDate", DateTime.Now);
+                        cmd.Parameters.AddWithValue("@Duration", this.duration);
+                        
                         return cmd.ExecuteNonQuery() > 0;
                     }
                 }
@@ -291,7 +303,11 @@ namespace Sofware_project
                     "Description = @Description," +
                     "Title = @Title, " +
                     "Location = @Location," +
-                    "EventDate = @EventDate" +
+                    "EventDate = @EventDate," +
+                    "MaxAttendees = @MaxAttendees," +
+                    "EventType = @EventType," +
+                    "Organiser = @Organiser," +
+                    "Duration = @Duration" +
                     " WHERE EventId = '" + this.eventId + "'";
 
                 using ( var cmd = new SqlCommand( query, sqlcon ))
@@ -304,6 +320,7 @@ namespace Sofware_project
                     cmd.Parameters.AddWithValue("@MaxAttendees", this.maxnumberofParticipants);
                     cmd.Parameters.AddWithValue("@EventType", this.typeofevent);
                     cmd.Parameters.AddWithValue("@Organiser", this.organiser);
+                    cmd.Parameters.AddWithValue("@Duration", this.duration);
                     cmd.ExecuteNonQuery();
                     return true;
                 }

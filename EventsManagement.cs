@@ -41,6 +41,10 @@ namespace Sofware_project
                 eventlocation1.Text = eventdataobj1.getLocation();
                 eventorganiser1.Text = eventdataobj1.getorganiser();
                 eventtype1.Text = eventdataobj1.gettypeofevent();
+                duration1.Text = eventdataobj1.Getduration().ToString();
+                String booking = "0/" + eventdataobj1.getmaxnumberofParticipants().ToString() + "Bookings";
+                booking1.Text = booking;
+
             }
             if (eventdataobj2.GetEventId() != -1)
             {
@@ -51,6 +55,9 @@ namespace Sofware_project
                 eventlocation2.Text = eventdataobj2.getLocation();
                 eventorganiser3.Text = eventdataobj2.getorganiser();
                 eventtype2.Text = eventdataobj2.gettypeofevent();
+                duration2.Text = eventdataobj2.Getduration().ToString();
+                String booking = "0/" + eventdataobj2.getmaxnumberofParticipants().ToString() + "Bookings";
+                booking2.Text = booking;
             }
             else
                 panel6.Hide();
@@ -63,6 +70,9 @@ namespace Sofware_project
                 eventlocation3.Text = eventdataobj3.getLocation();
                 eventorganiser3.Text = eventdataobj3.getorganiser();
                 eventtype3.Text = eventdataobj3.gettypeofevent();
+                duration3.Text = eventdataobj3.Getduration().ToString();
+                String booking = "0/" + eventdataobj3.getmaxnumberofParticipants().ToString() + "Bookings";
+                booking3.Text = booking;
             }
             else
                 Event3Panel.Hide();

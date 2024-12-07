@@ -43,9 +43,11 @@
             button1 = new Button();
             eventsearch_admins = new TextBox();
             panel6 = new Panel();
+            duration2 = new Label();
             eventdelete2 = new Button();
             eventedit2 = new Button();
             eventorganiser2 = new Label();
+            booking2 = new Label();
             eventlocation2 = new Label();
             eventdate2 = new Label();
             eventstatus2 = new Label();
@@ -53,9 +55,11 @@
             event_description2 = new TextBox();
             eventname2 = new Label();
             Event3Panel = new Panel();
+            duration3 = new Label();
             eventedit3 = new Button();
             eventdelete3 = new Button();
             eventorganiser3 = new Label();
+            booking3 = new Label();
             eventlocation3 = new Label();
             eventdate3 = new Label();
             eventstatus3 = new Label();
@@ -65,9 +69,11 @@
             panel9 = new Panel();
             panel10 = new Panel();
             panel12 = new Panel();
+            duration1 = new Label();
             eventdate1 = new Label();
             eventdelete1 = new Button();
             eventedit1 = new Button();
+            booking1 = new Label();
             eventorganiser1 = new Label();
             eventlocation1 = new Label();
             eventstatus1 = new Label();
@@ -76,12 +82,6 @@
             eventname1 = new Label();
             label9 = new Label();
             panel5 = new Panel();
-            label4 = new Label();
-            label5 = new Label();
-            label6 = new Label();
-            label7 = new Label();
-            label8 = new Label();
-            label10 = new Label();
             panel1.SuspendLayout();
             panel2.SuspendLayout();
             panel3.SuspendLayout();
@@ -239,11 +239,11 @@
             // panel6
             // 
             panel6.BorderStyle = BorderStyle.Fixed3D;
-            panel6.Controls.Add(label10);
+            panel6.Controls.Add(duration2);
             panel6.Controls.Add(eventdelete2);
             panel6.Controls.Add(eventedit2);
             panel6.Controls.Add(eventorganiser2);
-            panel6.Controls.Add(label5);
+            panel6.Controls.Add(booking2);
             panel6.Controls.Add(eventlocation2);
             panel6.Controls.Add(eventdate2);
             panel6.Controls.Add(eventstatus2);
@@ -256,6 +256,16 @@
             panel6.Size = new Size(241, 408);
             panel6.TabIndex = 4;
             panel6.Paint += panel6_Paint;
+            // 
+            // duration2
+            // 
+            duration2.AutoSize = true;
+            duration2.Font = new Font("Segoe UI", 10.2F, FontStyle.Regular, GraphicsUnit.Point, 0);
+            duration2.Location = new Point(5, 251);
+            duration2.Name = "duration2";
+            duration2.Size = new Size(102, 30);
+            duration2.TabIndex = 17;
+            duration2.Text = "duration2";
             // 
             // eventdelete2
             // 
@@ -292,6 +302,17 @@
             eventorganiser2.Size = new Size(110, 30);
             eventorganiser2.TabIndex = 13;
             eventorganiser2.Text = "organiser2";
+            // 
+            // booking2
+            // 
+            booking2.AutoSize = true;
+            booking2.Font = new Font("Segoe UI", 10.2F, FontStyle.Regular, GraphicsUnit.Point, 0);
+            booking2.Location = new Point(5, 311);
+            booking2.Name = "booking2";
+            booking2.Size = new Size(99, 30);
+            booking2.TabIndex = 11;
+            booking2.Text = "Booking2";
+            booking2.Click += label4_Click;
             // 
             // eventlocation2
             // 
@@ -362,11 +383,11 @@
             // Event3Panel
             // 
             Event3Panel.BorderStyle = BorderStyle.Fixed3D;
-            Event3Panel.Controls.Add(label8);
+            Event3Panel.Controls.Add(duration3);
             Event3Panel.Controls.Add(eventedit3);
             Event3Panel.Controls.Add(eventdelete3);
             Event3Panel.Controls.Add(eventorganiser3);
-            Event3Panel.Controls.Add(label6);
+            Event3Panel.Controls.Add(booking3);
             Event3Panel.Controls.Add(eventlocation3);
             Event3Panel.Controls.Add(eventdate3);
             Event3Panel.Controls.Add(eventstatus3);
@@ -377,6 +398,16 @@
             Event3Panel.Name = "Event3Panel";
             Event3Panel.Size = new Size(241, 408);
             Event3Panel.TabIndex = 5;
+            // 
+            // duration3
+            // 
+            duration3.AutoSize = true;
+            duration3.Font = new Font("Segoe UI", 10.2F, FontStyle.Regular, GraphicsUnit.Point, 0);
+            duration3.Location = new Point(9, 251);
+            duration3.Name = "duration3";
+            duration3.Size = new Size(102, 30);
+            duration3.TabIndex = 16;
+            duration3.Text = "duration3";
             // 
             // eventedit3
             // 
@@ -413,6 +444,17 @@
             eventorganiser3.Size = new Size(110, 30);
             eventorganiser3.TabIndex = 12;
             eventorganiser3.Text = "organiser3";
+            // 
+            // booking3
+            // 
+            booking3.AutoSize = true;
+            booking3.Font = new Font("Segoe UI", 10.2F, FontStyle.Regular, GraphicsUnit.Point, 0);
+            booking3.Location = new Point(9, 311);
+            booking3.Name = "booking3";
+            booking3.Size = new Size(99, 30);
+            booking3.TabIndex = 11;
+            booking3.Text = "Booking3";
+            booking3.Click += label4_Click;
             // 
             // eventlocation3
             // 
@@ -501,11 +543,11 @@
             // panel12
             // 
             panel12.BorderStyle = BorderStyle.Fixed3D;
-            panel12.Controls.Add(label7);
+            panel12.Controls.Add(duration1);
             panel12.Controls.Add(eventdate1);
             panel12.Controls.Add(eventdelete1);
             panel12.Controls.Add(eventedit1);
-            panel12.Controls.Add(label4);
+            panel12.Controls.Add(booking1);
             panel12.Controls.Add(eventorganiser1);
             panel12.Controls.Add(eventlocation1);
             panel12.Controls.Add(eventstatus1);
@@ -518,6 +560,16 @@
             panel12.Size = new Size(241, 408);
             panel12.TabIndex = 6;
             panel12.Paint += panel12_Paint;
+            // 
+            // duration1
+            // 
+            duration1.AutoSize = true;
+            duration1.Font = new Font("Segoe UI", 10.2F, FontStyle.Regular, GraphicsUnit.Point, 0);
+            duration1.Location = new Point(9, 251);
+            duration1.Name = "duration1";
+            duration1.Size = new Size(102, 30);
+            duration1.TabIndex = 15;
+            duration1.Text = "duration1";
             // 
             // eventdate1
             // 
@@ -556,6 +608,17 @@
             eventedit1.TabIndex = 12;
             eventedit1.UseVisualStyleBackColor = true;
             eventedit1.Click += eventedit1_Click;
+            // 
+            // booking1
+            // 
+            booking1.AutoSize = true;
+            booking1.Font = new Font("Segoe UI", 10.2F, FontStyle.Regular, GraphicsUnit.Point, 0);
+            booking1.Location = new Point(9, 311);
+            booking1.Name = "booking1";
+            booking1.Size = new Size(99, 30);
+            booking1.TabIndex = 11;
+            booking1.Text = "Booking1";
+            booking1.Click += label4_Click;
             // 
             // eventorganiser1
             // 
@@ -641,69 +704,6 @@
             panel5.Name = "panel5";
             panel5.Size = new Size(241, 73);
             panel5.TabIndex = 11;
-            // 
-            // label4
-            // 
-            label4.AutoSize = true;
-            label4.Font = new Font("Segoe UI", 10.2F, FontStyle.Regular, GraphicsUnit.Point, 0);
-            label4.Location = new Point(9, 311);
-            label4.Name = "label4";
-            label4.Size = new Size(99, 30);
-            label4.TabIndex = 11;
-            label4.Text = "Booking1";
-            label4.Click += label4_Click;
-            // 
-            // label5
-            // 
-            label5.AutoSize = true;
-            label5.Font = new Font("Segoe UI", 10.2F, FontStyle.Regular, GraphicsUnit.Point, 0);
-            label5.Location = new Point(5, 311);
-            label5.Name = "label5";
-            label5.Size = new Size(99, 30);
-            label5.TabIndex = 11;
-            label5.Text = "Booking2";
-            label5.Click += label4_Click;
-            // 
-            // label6
-            // 
-            label6.AutoSize = true;
-            label6.Font = new Font("Segoe UI", 10.2F, FontStyle.Regular, GraphicsUnit.Point, 0);
-            label6.Location = new Point(9, 311);
-            label6.Name = "label6";
-            label6.Size = new Size(99, 30);
-            label6.TabIndex = 11;
-            label6.Text = "Booking3";
-            label6.Click += label4_Click;
-            // 
-            // label7
-            // 
-            label7.AutoSize = true;
-            label7.Font = new Font("Segoe UI", 10.2F, FontStyle.Regular, GraphicsUnit.Point, 0);
-            label7.Location = new Point(9, 251);
-            label7.Name = "label7";
-            label7.Size = new Size(102, 30);
-            label7.TabIndex = 15;
-            label7.Text = "duration1";
-            // 
-            // label8
-            // 
-            label8.AutoSize = true;
-            label8.Font = new Font("Segoe UI", 10.2F, FontStyle.Regular, GraphicsUnit.Point, 0);
-            label8.Location = new Point(9, 251);
-            label8.Name = "label8";
-            label8.Size = new Size(102, 30);
-            label8.TabIndex = 16;
-            label8.Text = "duration3";
-            // 
-            // label10
-            // 
-            label10.AutoSize = true;
-            label10.Font = new Font("Segoe UI", 10.2F, FontStyle.Regular, GraphicsUnit.Point, 0);
-            label10.Location = new Point(5, 251);
-            label10.Name = "label10";
-            label10.Size = new Size(102, 30);
-            label10.TabIndex = 17;
-            label10.Text = "duration2";
             // 
             // EventsManagement
             // 
@@ -799,11 +799,11 @@
         private Button eventdelete1;
         private Label eventdate1;
         private Label totalnum_attendees;
-        private Label label4;
-        private Label label5;
-        private Label label6;
-        private Label label10;
-        private Label label8;
-        private Label label7;
+        private Label booking1;
+        private Label booking2;
+        private Label booking3;
+        private Label duration2;
+        private Label duration3;
+        private Label duration1;
     }
 }

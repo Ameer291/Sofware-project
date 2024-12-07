@@ -40,6 +40,7 @@ namespace Sofware_project
                 total_bookings.Text = eventDataobj.getmaxnumberofParticipants().ToString();
                 organiser.Text = eventDataobj.getorganiser();
                 event_type.Text = eventDataobj.gettypeofevent();
+                event_time.Text = eventDataobj.Getduration().ToString();
             }
         }
 
@@ -101,7 +102,15 @@ namespace Sofware_project
             {
 
             }
+            float duration = 1.0f;
+            try
+            {
+                duration = float.Parse(event_time.Text);
+            }
+            catch (Exception ex)
+            {
 
+            }
             if (event_name.Text == "")
             {
                 MessageBox.Show("Event name should be filled: ", "Event Details",
@@ -129,6 +138,7 @@ namespace Sofware_project
                                               event_name.Text, eventdate, maxbookings, event_type.Text,
                                               event_location.Text, event_status.Text);
             this.eventDataobj.setorganiser(organiser.Text);
+            this.eventDataobj.Setduration(duration);
             this.eventDataobj.UpdateDB();
 
             //Exist = eventdataobj.IsAlreadyExist();
