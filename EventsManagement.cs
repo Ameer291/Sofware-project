@@ -53,7 +53,7 @@ namespace Sofware_project
                 event_description2.Text = eventdataobj2.geteventdescription();
                 eventdate2.Text = eventdataobj2.geteventDate().ToLongDateString();
                 eventlocation2.Text = eventdataobj2.getLocation();
-                eventorganiser3.Text = eventdataobj2.getorganiser();
+                eventorganiser2.Text = eventdataobj2.getorganiser();
                 eventtype2.Text = eventdataobj2.gettypeofevent();
                 duration2.Text = eventdataobj2.Getduration().ToString();
                 String booking = "0/" + eventdataobj2.getmaxnumberofParticipants().ToString() + "Bookings";
@@ -80,17 +80,17 @@ namespace Sofware_project
         private void UpdateEventDetails()
         {
             int EventId;
-            if(eventdataobj1 ==null )
+            if (eventdataobj1 == null)
                 eventdataobj1 = new EventData();
             // if (PageNum == 1)
             EventId = eventdataobj1.GetEventIdFromDB(0);
             eventdataobj1.GetDataFromDB(EventId);
-            
+
             EventId = eventdataobj1.GetEventIdFromDB(1);
             if (eventdataobj2 == null)
                 eventdataobj2 = new EventData();
             eventdataobj2.GetDataFromDB(EventId);
-           
+
 
             EventId = eventdataobj1.GetEventIdFromDB(2);
             if (eventdataobj3 == null)
@@ -103,62 +103,12 @@ namespace Sofware_project
         {
         }
 
-        private void label1_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void textBox3_TextChanged(object sender, EventArgs e)
-        {
-
-        }
-
-        private void panel11_Paint(object sender, PaintEventArgs e)
-        {
-
-        }
-
-        private void label6_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void panel5_Paint(object sender, PaintEventArgs e)
-        {
-
-        }
-
-        private void textBox1_TextChanged(object sender, EventArgs e)
-        {
-
-        }
-
         private void eventtype_Click(object sender, EventArgs e)
         {
 
         }
 
         private void panel6_Paint(object sender, PaintEventArgs e)
-        {
-
-        }
-
-        private void panel12_Paint(object sender, PaintEventArgs e)
-        {
-
-        }
-
-        private void label4_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void eventtype1_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void panel3_Paint(object sender, PaintEventArgs e)
         {
 
         }
@@ -183,6 +133,36 @@ namespace Sofware_project
             //UpdateEventDetails();
             Events_info_create eventobj = new Events_info_create();
             eventobj.Show();
+        }
+
+        private void eventedit2_Click(object sender, EventArgs e)
+        {
+            Events_info_create eventobj = new Events_info_create();
+            eventobj.FormClosing += new FormClosingEventHandler(this.event_Refresh);
+            eventobj.SetEventDetails(eventdataobj2);
+            eventobj.ShowDialog();
+            this.Refresh();
+        }
+
+        private void eventdelete2_Click(object sender, EventArgs e)
+        {
+            eventdataobj2.DeleteEventFromDB();
+            UpdateEventDetails();
+        }
+
+        private void eventedit3_Click(object sender, EventArgs e)
+        {
+            Events_info_create eventobj = new Events_info_create();
+            eventobj.FormClosing += new FormClosingEventHandler(this.event_Refresh);
+            eventobj.SetEventDetails(eventdataobj3);
+            eventobj.ShowDialog();
+            this.Refresh();
+        }
+
+        private void eventdelete3_Click(object sender, EventArgs e)
+        {
+            eventdataobj3.DeleteEventFromDB();
+            UpdateEventDetails();
         }
     }
 }

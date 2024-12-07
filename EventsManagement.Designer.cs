@@ -119,7 +119,6 @@
             label1.Size = new Size(128, 30);
             label1.TabIndex = 0;
             label1.Text = "Total Events";
-            label1.Click += label1_Click;
             // 
             // panel2
             // 
@@ -159,7 +158,6 @@
             panel3.Name = "panel3";
             panel3.Size = new Size(214, 120);
             panel3.TabIndex = 1;
-            panel3.Paint += panel3_Paint;
             // 
             // totalnum_attendees
             // 
@@ -234,7 +232,6 @@
             eventsearch_admins.PlaceholderText = "Search events";
             eventsearch_admins.Size = new Size(299, 28);
             eventsearch_admins.TabIndex = 3;
-            eventsearch_admins.TextChanged += textBox3_TextChanged;
             // 
             // panel6
             // 
@@ -279,6 +276,7 @@
             eventdelete2.Size = new Size(39, 30);
             eventdelete2.TabIndex = 16;
             eventdelete2.UseVisualStyleBackColor = true;
+            eventdelete2.Click += eventdelete2_Click;
             // 
             // eventedit2
             // 
@@ -292,6 +290,7 @@
             eventedit2.Size = new Size(39, 30);
             eventedit2.TabIndex = 14;
             eventedit2.UseVisualStyleBackColor = true;
+            eventedit2.Click += eventedit2_Click;
             // 
             // eventorganiser2
             // 
@@ -312,7 +311,6 @@
             booking2.Size = new Size(99, 30);
             booking2.TabIndex = 11;
             booking2.Text = "Booking2";
-            booking2.Click += label4_Click;
             // 
             // eventlocation2
             // 
@@ -368,7 +366,6 @@
             event_description2.ReadOnly = true;
             event_description2.Size = new Size(241, 50);
             event_description2.TabIndex = 4;
-            event_description2.TextChanged += textBox1_TextChanged;
             // 
             // eventname2
             // 
@@ -421,6 +418,7 @@
             eventedit3.Size = new Size(39, 30);
             eventedit3.TabIndex = 15;
             eventedit3.UseVisualStyleBackColor = true;
+            eventedit3.Click += eventedit3_Click;
             // 
             // eventdelete3
             // 
@@ -434,6 +432,7 @@
             eventdelete3.Size = new Size(39, 30);
             eventdelete3.TabIndex = 15;
             eventdelete3.UseVisualStyleBackColor = true;
+            eventdelete3.Click += eventdelete3_Click;
             // 
             // eventorganiser3
             // 
@@ -454,7 +453,6 @@
             booking3.Size = new Size(99, 30);
             booking3.TabIndex = 11;
             booking3.Text = "Booking3";
-            booking3.Click += label4_Click;
             // 
             // eventlocation3
             // 
@@ -520,7 +518,6 @@
             eventname3.Size = new Size(98, 32);
             eventname3.TabIndex = 3;
             eventname3.Text = "event 3";
-            eventname3.Click += label6_Click;
             // 
             // panel9
             // 
@@ -559,7 +556,6 @@
             panel12.Name = "panel12";
             panel12.Size = new Size(241, 408);
             panel12.TabIndex = 6;
-            panel12.Paint += panel12_Paint;
             // 
             // duration1
             // 
@@ -618,7 +614,6 @@
             booking1.Size = new Size(99, 30);
             booking1.TabIndex = 11;
             booking1.Text = "Booking1";
-            booking1.Click += label4_Click;
             // 
             // eventorganiser1
             // 
@@ -629,7 +624,6 @@
             eventorganiser1.Size = new Size(110, 30);
             eventorganiser1.TabIndex = 11;
             eventorganiser1.Text = "organiser1";
-            eventorganiser1.Click += label4_Click;
             // 
             // eventlocation1
             // 
@@ -675,7 +669,6 @@
             eventtype1.Size = new Size(129, 30);
             eventtype1.TabIndex = 2;
             eventtype1.Text = "event type 1";
-            eventtype1.Click += eventtype1_Click;
             // 
             // eventname1
             // 
