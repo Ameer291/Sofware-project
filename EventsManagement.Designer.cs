@@ -76,6 +76,12 @@
             eventname1 = new Label();
             label9 = new Label();
             panel5 = new Panel();
+            label4 = new Label();
+            label5 = new Label();
+            label6 = new Label();
+            label7 = new Label();
+            label8 = new Label();
+            label10 = new Label();
             panel1.SuspendLayout();
             panel2.SuspendLayout();
             panel3.SuspendLayout();
@@ -233,9 +239,11 @@
             // panel6
             // 
             panel6.BorderStyle = BorderStyle.Fixed3D;
+            panel6.Controls.Add(label10);
             panel6.Controls.Add(eventdelete2);
             panel6.Controls.Add(eventedit2);
             panel6.Controls.Add(eventorganiser2);
+            panel6.Controls.Add(label5);
             panel6.Controls.Add(eventlocation2);
             panel6.Controls.Add(eventdate2);
             panel6.Controls.Add(eventstatus2);
@@ -279,7 +287,7 @@
             // 
             eventorganiser2.AutoSize = true;
             eventorganiser2.Font = new Font("Segoe UI", 10.2F, FontStyle.Regular, GraphicsUnit.Point, 0);
-            eventorganiser2.Location = new Point(3, 336);
+            eventorganiser2.Location = new Point(5, 341);
             eventorganiser2.Name = "eventorganiser2";
             eventorganiser2.Size = new Size(110, 30);
             eventorganiser2.TabIndex = 13;
@@ -289,7 +297,7 @@
             // 
             eventlocation2.AutoSize = true;
             eventlocation2.Font = new Font("Segoe UI", 10.2F, FontStyle.Regular, GraphicsUnit.Point, 0);
-            eventlocation2.Location = new Point(3, 281);
+            eventlocation2.Location = new Point(5, 281);
             eventlocation2.Name = "eventlocation2";
             eventlocation2.Size = new Size(98, 30);
             eventlocation2.TabIndex = 11;
@@ -299,7 +307,7 @@
             // 
             eventdate2.AutoSize = true;
             eventdate2.Font = new Font("Segoe UI", 10.2F, FontStyle.Regular, GraphicsUnit.Point, 0);
-            eventdate2.Location = new Point(3, 210);
+            eventdate2.Location = new Point(5, 221);
             eventdate2.Name = "eventdate2";
             eventdate2.Size = new Size(65, 30);
             eventdate2.TabIndex = 7;
@@ -311,7 +319,7 @@
             eventstatus2.BackColor = Color.LemonChiffon;
             eventstatus2.Font = new Font("Segoe UI Semibold", 10.2F, FontStyle.Bold, GraphicsUnit.Point, 0);
             eventstatus2.ForeColor = Color.Goldenrod;
-            eventstatus2.Location = new Point(3, 251);
+            eventstatus2.Location = new Point(142, 175);
             eventstatus2.Name = "eventstatus2";
             eventstatus2.Size = new Size(141, 30);
             eventstatus2.TabIndex = 6;
@@ -332,6 +340,7 @@
             // 
             event_description2.BackColor = SystemColors.Window;
             event_description2.BorderStyle = BorderStyle.None;
+            event_description2.Font = new Font("Segoe UI Semibold", 9F, FontStyle.Bold, GraphicsUnit.Point, 0);
             event_description2.Location = new Point(-2, 112);
             event_description2.Multiline = true;
             event_description2.Name = "event_description2";
@@ -344,7 +353,7 @@
             // 
             eventname2.AutoSize = true;
             eventname2.Font = new Font("Segoe UI", 12F, FontStyle.Bold, GraphicsUnit.Point, 0);
-            eventname2.Location = new Point(14, 74);
+            eventname2.Location = new Point(5, 74);
             eventname2.Name = "eventname2";
             eventname2.Size = new Size(98, 32);
             eventname2.TabIndex = 2;
@@ -353,9 +362,11 @@
             // Event3Panel
             // 
             Event3Panel.BorderStyle = BorderStyle.Fixed3D;
+            Event3Panel.Controls.Add(label8);
             Event3Panel.Controls.Add(eventedit3);
             Event3Panel.Controls.Add(eventdelete3);
             Event3Panel.Controls.Add(eventorganiser3);
+            Event3Panel.Controls.Add(label6);
             Event3Panel.Controls.Add(eventlocation3);
             Event3Panel.Controls.Add(eventdate3);
             Event3Panel.Controls.Add(eventstatus3);
@@ -397,7 +408,7 @@
             // 
             eventorganiser3.AutoSize = true;
             eventorganiser3.Font = new Font("Segoe UI", 10.2F, FontStyle.Regular, GraphicsUnit.Point, 0);
-            eventorganiser3.Location = new Point(6, 338);
+            eventorganiser3.Location = new Point(9, 341);
             eventorganiser3.Name = "eventorganiser3";
             eventorganiser3.Size = new Size(110, 30);
             eventorganiser3.TabIndex = 12;
@@ -407,7 +418,7 @@
             // 
             eventlocation3.AutoSize = true;
             eventlocation3.Font = new Font("Segoe UI", 10.2F, FontStyle.Regular, GraphicsUnit.Point, 0);
-            eventlocation3.Location = new Point(6, 281);
+            eventlocation3.Location = new Point(9, 281);
             eventlocation3.Name = "eventlocation3";
             eventlocation3.Size = new Size(98, 30);
             eventlocation3.TabIndex = 10;
@@ -417,7 +428,7 @@
             // 
             eventdate3.AutoSize = true;
             eventdate3.Font = new Font("Segoe UI", 10.2F, FontStyle.Regular, GraphicsUnit.Point, 0);
-            eventdate3.Location = new Point(6, 210);
+            eventdate3.Location = new Point(9, 221);
             eventdate3.Name = "eventdate3";
             eventdate3.Size = new Size(65, 30);
             eventdate3.TabIndex = 8;
@@ -429,7 +440,7 @@
             eventstatus3.BackColor = Color.LemonChiffon;
             eventstatus3.Font = new Font("Segoe UI Semibold", 10.2F, FontStyle.Bold, GraphicsUnit.Point, 0);
             eventstatus3.ForeColor = Color.Goldenrod;
-            eventstatus3.Location = new Point(6, 251);
+            eventstatus3.Location = new Point(139, 175);
             eventstatus3.Name = "eventstatus3";
             eventstatus3.Size = new Size(141, 30);
             eventstatus3.TabIndex = 7;
@@ -462,7 +473,7 @@
             // 
             eventname3.AutoSize = true;
             eventname3.Font = new Font("Segoe UI", 12F, FontStyle.Bold, GraphicsUnit.Point, 0);
-            eventname3.Location = new Point(20, 74);
+            eventname3.Location = new Point(5, 74);
             eventname3.Name = "eventname3";
             eventname3.Size = new Size(98, 32);
             eventname3.TabIndex = 3;
@@ -490,9 +501,11 @@
             // panel12
             // 
             panel12.BorderStyle = BorderStyle.Fixed3D;
+            panel12.Controls.Add(label7);
             panel12.Controls.Add(eventdate1);
             panel12.Controls.Add(eventdelete1);
             panel12.Controls.Add(eventedit1);
+            panel12.Controls.Add(label4);
             panel12.Controls.Add(eventorganiser1);
             panel12.Controls.Add(eventlocation1);
             panel12.Controls.Add(eventstatus1);
@@ -510,7 +523,7 @@
             // 
             eventdate1.AutoSize = true;
             eventdate1.Font = new Font("Segoe UI", 10.2F, FontStyle.Regular, GraphicsUnit.Point, 0);
-            eventdate1.Location = new Point(11, 220);
+            eventdate1.Location = new Point(9, 221);
             eventdate1.Name = "eventdate1";
             eventdate1.Size = new Size(65, 30);
             eventdate1.TabIndex = 14;
@@ -548,7 +561,7 @@
             // 
             eventorganiser1.AutoSize = true;
             eventorganiser1.Font = new Font("Segoe UI", 10.2F, FontStyle.Regular, GraphicsUnit.Point, 0);
-            eventorganiser1.Location = new Point(11, 328);
+            eventorganiser1.Location = new Point(9, 341);
             eventorganiser1.Name = "eventorganiser1";
             eventorganiser1.Size = new Size(110, 30);
             eventorganiser1.TabIndex = 11;
@@ -559,7 +572,7 @@
             // 
             eventlocation1.AutoSize = true;
             eventlocation1.Font = new Font("Segoe UI", 10.2F, FontStyle.Regular, GraphicsUnit.Point, 0);
-            eventlocation1.Location = new Point(11, 281);
+            eventlocation1.Location = new Point(9, 281);
             eventlocation1.Name = "eventlocation1";
             eventlocation1.Size = new Size(98, 30);
             eventlocation1.TabIndex = 9;
@@ -571,7 +584,7 @@
             eventstatus1.BackColor = Color.LemonChiffon;
             eventstatus1.Font = new Font("Segoe UI Semibold", 10.2F, FontStyle.Bold, GraphicsUnit.Point, 0);
             eventstatus1.ForeColor = Color.Goldenrod;
-            eventstatus1.Location = new Point(13, 251);
+            eventstatus1.Location = new Point(144, 175);
             eventstatus1.Name = "eventstatus1";
             eventstatus1.Size = new Size(137, 30);
             eventstatus1.TabIndex = 4;
@@ -605,7 +618,7 @@
             // 
             eventname1.AutoSize = true;
             eventname1.Font = new Font("Segoe UI", 12F, FontStyle.Bold, GraphicsUnit.Point, 0);
-            eventname1.Location = new Point(17, 74);
+            eventname1.Location = new Point(5, 74);
             eventname1.Name = "eventname1";
             eventname1.Size = new Size(98, 32);
             eventname1.TabIndex = 1;
@@ -628,6 +641,69 @@
             panel5.Name = "panel5";
             panel5.Size = new Size(241, 73);
             panel5.TabIndex = 11;
+            // 
+            // label4
+            // 
+            label4.AutoSize = true;
+            label4.Font = new Font("Segoe UI", 10.2F, FontStyle.Regular, GraphicsUnit.Point, 0);
+            label4.Location = new Point(9, 311);
+            label4.Name = "label4";
+            label4.Size = new Size(99, 30);
+            label4.TabIndex = 11;
+            label4.Text = "Booking1";
+            label4.Click += label4_Click;
+            // 
+            // label5
+            // 
+            label5.AutoSize = true;
+            label5.Font = new Font("Segoe UI", 10.2F, FontStyle.Regular, GraphicsUnit.Point, 0);
+            label5.Location = new Point(5, 311);
+            label5.Name = "label5";
+            label5.Size = new Size(99, 30);
+            label5.TabIndex = 11;
+            label5.Text = "Booking2";
+            label5.Click += label4_Click;
+            // 
+            // label6
+            // 
+            label6.AutoSize = true;
+            label6.Font = new Font("Segoe UI", 10.2F, FontStyle.Regular, GraphicsUnit.Point, 0);
+            label6.Location = new Point(9, 311);
+            label6.Name = "label6";
+            label6.Size = new Size(99, 30);
+            label6.TabIndex = 11;
+            label6.Text = "Booking3";
+            label6.Click += label4_Click;
+            // 
+            // label7
+            // 
+            label7.AutoSize = true;
+            label7.Font = new Font("Segoe UI", 10.2F, FontStyle.Regular, GraphicsUnit.Point, 0);
+            label7.Location = new Point(9, 251);
+            label7.Name = "label7";
+            label7.Size = new Size(102, 30);
+            label7.TabIndex = 15;
+            label7.Text = "duration1";
+            // 
+            // label8
+            // 
+            label8.AutoSize = true;
+            label8.Font = new Font("Segoe UI", 10.2F, FontStyle.Regular, GraphicsUnit.Point, 0);
+            label8.Location = new Point(9, 251);
+            label8.Name = "label8";
+            label8.Size = new Size(102, 30);
+            label8.TabIndex = 16;
+            label8.Text = "duration3";
+            // 
+            // label10
+            // 
+            label10.AutoSize = true;
+            label10.Font = new Font("Segoe UI", 10.2F, FontStyle.Regular, GraphicsUnit.Point, 0);
+            label10.Location = new Point(5, 251);
+            label10.Name = "label10";
+            label10.Size = new Size(102, 30);
+            label10.TabIndex = 17;
+            label10.Text = "duration2";
             // 
             // EventsManagement
             // 
@@ -723,5 +799,11 @@
         private Button eventdelete1;
         private Label eventdate1;
         private Label totalnum_attendees;
+        private Label label4;
+        private Label label5;
+        private Label label6;
+        private Label label10;
+        private Label label8;
+        private Label label7;
     }
 }

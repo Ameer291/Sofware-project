@@ -113,9 +113,10 @@
             label4.Location = new Point(15, 786);
             label4.Margin = new Padding(4, 0, 4, 0);
             label4.Name = "label4";
-            label4.Size = new Size(183, 32);
+            label4.Size = new Size(242, 32);
             label4.TabIndex = 10;
-            label4.Text = "Total bookings";
+            label4.Text = "Maximum bookings";
+            label4.Click += label4_Click;
             // 
             // label5
             // 
@@ -135,9 +136,10 @@
             label6.Location = new Point(15, 590);
             label6.Margin = new Padding(4, 0, 4, 0);
             label6.Name = "label6";
-            label6.Size = new Size(70, 32);
+            label6.Size = new Size(116, 32);
             label6.TabIndex = 12;
-            label6.Text = "Time";
+            label6.Text = "Duration";
+            label6.Click += label6_Click;
             // 
             // label7
             // 
@@ -146,9 +148,9 @@
             label7.Location = new Point(15, 492);
             label7.Margin = new Padding(4, 0, 4, 0);
             label7.Name = "label7";
-            label7.Size = new Size(67, 32);
+            label7.Size = new Size(256, 32);
             label7.TabIndex = 13;
-            label7.Text = "Date";
+            label7.Text = "Date (DD/MM/YYYY)";
             // 
             // event_date
             // 

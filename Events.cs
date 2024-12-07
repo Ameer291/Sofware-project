@@ -123,7 +123,7 @@ namespace Sofware_project
             if (this.eventDataobj == null)
             {
                 this.eventDataobj = new EventData();
-                
+
             }
             this.eventDataobj.UpdateEventData(event_description.Text,
                                               event_name.Text, eventdate, maxbookings, event_type.Text,
@@ -143,6 +143,16 @@ namespace Sofware_project
         private void button2_Click(object sender, EventArgs e)
         {
             this.Close();
+        }
+
+        private void label6_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void label4_Click(object sender, EventArgs e)
+        {
+
         }
     }
 }
