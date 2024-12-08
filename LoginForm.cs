@@ -58,8 +58,8 @@ namespace Sofware_project
                             String phonenumber = reader.IsDBNull(13) ? "" : reader.GetString(13);
                             String address = reader.IsDBNull(13) ? "" : reader.GetString(12);
                             String password = reader.IsDBNull(3) ? "" : reader.GetString(3);
-                            // if( !reader.IsDBNull(10))
-                              // DOB = (DateTime)reader.GetDateTime(10);
+                            //if( !reader.IsDBNull(10))
+                            //    DOB = (DateTime)reader.GetDateTime(10);
 
 
                             User CurrentUsrObj = new Member( firstname, lastname, email, phonenumber,
@@ -72,12 +72,12 @@ namespace Sofware_project
             }
             catch (Exception)
             {
-                MessageBox.Show("Error connecting to database", "Database Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                MessageBox.Show("Error cin select query", "Database Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
         }
         private void btnLogin_Click(object sender, EventArgs e)
         {
-            string connectionString = @"Data Source=(LocalDB)\MSSQLLocalDB;AttachDbFilename=C:\mithra\gouri2024\togetherculture\Sofware-project\data\db_togetherculture.mdf;Integrated Security=True";
+            string connectionString = null;// @"Data Source=(LocalDB)\MSSQLLocalDB;AttachDbFilename=C:\mithra\gouri2024\togetherculture\Sofware-project\data\db_togetherculture.mdf;Integrated Security=True";
             if (IsValidUser(txtUsername.Text.Trim(), txtPassword.Text, connectionString))
             {
                 MessageBox.Show("Login Successful!", "Success", MessageBoxButtons.OK, MessageBoxIcon.Information);
