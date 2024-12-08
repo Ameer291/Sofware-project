@@ -56,3 +56,7 @@ C:\Users\1002f\source\repos\Sofware-project-master\obj\Debug\net8.0-windows\Sofw
 C:\Users\1002f\source\repos\Sofware-project-master\obj\Debug\net8.0-windows\Sofware project.genruntimeconfig.cache
 C:\Users\1002f\source\repos\Sofware-project-master\obj\Debug\net8.0-windows\ref\Sofware project.dll
 C:\Users\1002f\source\repos\Sofware-project-master\obj\Debug\net8.0-windows\Sofware_project.DashboardForm.resources
+C:\mithra\gouri2024\togetherculture\Sofware-project\obj\Debug\net8.0-windows\Sofware project.csproj.AssemblyReference.cache
+C:\mithra\gouri2024\togetherculture\Sofware-project\obj\Debug\net8.0-windows\Sofware project.dll
+C:\mithra\gouri2024\togetherculture\Sofware-project\obj\Debug\net8.0-windows\refint\Sofware project.dll
+C:\mithra\gouri2024\togetherculture\Sofware-project\obj\Debug\net8.0-windows\Sofware project.pdb
