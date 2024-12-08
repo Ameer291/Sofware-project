@@ -367,3 +367,7 @@ FodyWeavers.xsd
 /Change password.resx
 /Change password.cs
 /Software_project/Properties.cs
+/obj/Release/net8.0-windows/Sofware project.AssemblyInfo.cs
+/obj/Release/net8.0-windows/Sofware project.AssemblyInfoInputs.cache
+/Sofware project.csproj.user
+/.gitignore
