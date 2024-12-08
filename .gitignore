@@ -371,3 +371,8 @@ FodyWeavers.xsd
 /obj/Release/net8.0-windows/Sofware project.AssemblyInfoInputs.cache
 /Sofware project.csproj.user
 /.gitignore
+/obj/Sofware project.csproj.nuget.g.props
+/obj/Sofware project.csproj.nuget.dgspec.json
+/obj/project.nuget.cache
+/obj/project.assets.json
+/obj/Release/net8.0-windows/Sofware project.assets.cache
