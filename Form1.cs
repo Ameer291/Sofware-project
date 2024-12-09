@@ -11,5 +11,11 @@ namespace Sofware_project
         {
 
         }
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+            SettingsPage p = new SettingsPage();
+            p.ShowDialog();
+        }
     }
 }
