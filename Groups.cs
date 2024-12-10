@@ -10,24 +10,29 @@ using System.Windows.Forms;
 
 namespace Sofware_project
 {
-    public partial class Profile_Visibility : Form
+    public partial class Groups : Form
     {
-        public Profile_Visibility()
+        public Groups()
         {
             InitializeComponent();
         }
 
-        private void label1_Click(object sender, EventArgs e)
+        private void Groups_Load(object sender, EventArgs e)
         {
 
         }
 
-        private void button2_Click(object sender, EventArgs e)
+        private void event_type_TextChanged(object sender, EventArgs e)
         {
 
         }
 
-        private void Profile_Visibility_Load(object sender, EventArgs e)
+        private void group_status_TextChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void group_type_SelectedIndexChanged(object sender, EventArgs e)
         {
 
         }
