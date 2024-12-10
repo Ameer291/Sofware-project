@@ -1,4 +1,4 @@
-﻿namespace tcc
+﻿namespace Software_project
 {
     partial class GroupsForm
     {
