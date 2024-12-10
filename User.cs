@@ -31,6 +31,7 @@ namespace Sofware_project
             this.Email = email;
             this.PhoneNumber = phonenumber;
             this.Password = Password;
+            this.Membertype = 1;
         }
         public string GetFirstName()
         {

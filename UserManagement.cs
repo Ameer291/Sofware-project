@@ -18,7 +18,7 @@ namespace Software_project
         private Panel sidebar;
         private Form childForm;
         private EventsManagement EMobj;
-        private EventsManagement GroupManagementobj;
+        private GroupsManagement GroupManagementobj;
         public UserManagementForm()
         {
             InitializeComponent();
@@ -32,7 +32,7 @@ namespace Software_project
             this.BackColor = Color.FromArgb(250, 245, 255);
             InitializeUI();
             EMobj = new EventsManagement();
-            GroupManagementobj = new EventsManagement();
+            GroupManagementobj = new GroupsManagement();
         }
 
         private void InitializeUI()
@@ -872,7 +872,7 @@ namespace Software_project
                 {
                     EMobj.Owner = this;
                     EMobj.StartPosition = FormStartPosition.Manual;
-                    EMobj.Location = new Point(250,25 );
+                    EMobj.Location = new Point(this.Left + 250, this.Top + 30);
                     EMobj.Size = new Size( ClientSize.Width - 250, ClientSize.Height );
                     // eventobj.WindowStartupLocation = 
                     //eventobj.Left += 480;
@@ -885,8 +885,11 @@ namespace Software_project
                 {
                     GroupManagementobj.Owner = this;
                     GroupManagementobj.StartPosition = FormStartPosition.Manual;
-                    GroupManagementobj.Location = new Point(250, 25);
+                    GroupManagementobj.Location = new Point(this.Left + 250, this.Top + 30);
                     GroupManagementobj.Size = new Size(ClientSize.Width - 250, ClientSize.Height);
+                   
+
+
                     // eventobj.WindowStartupLocation = 
                     //eventobj.Left += 480;
                     //eventobj.Top += 20;
@@ -896,7 +899,7 @@ namespace Software_project
                 }
                 else
                 {
-                    GroupManagementobj.Show();
+                    GroupManagementobj.Hide();
                     EMobj.Hide();
                 }
             }
