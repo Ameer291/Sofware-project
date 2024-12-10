@@ -1,6 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Linq;
+using System.Reflection;
 using System.Text;
 using System.Threading.Tasks;
 
@@ -19,7 +20,7 @@ namespace Sofware_project
         private string Username;
         private Image Photo;
         int Membertype; // 0 for admin, 1 for member, 2 for non member
-
+        int profilevisibility; //1 admin only 2 -admin &user 3 everyone
         public User(string firstname, string lastname, string email, string phonenumber,
             string gender, string address, string username, string Password )
         {
@@ -31,6 +32,7 @@ namespace Sofware_project
             this.Email = email;
             this.PhoneNumber = phonenumber;
             this.Password = Password;
+            this.Membertype = 1;
         }
         public string GetFirstName()
         {
@@ -135,6 +137,10 @@ namespace Sofware_project
         {
             this.Membertype = membertype;
 
+        }
+        public void setProfVisibility( int visibility )
+        {
+            this.profilevisibility = visibility;
         }
 
     }

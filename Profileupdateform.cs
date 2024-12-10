@@ -25,7 +25,7 @@ namespace Sofware_project
             User currentuser = LoginUser.GetInstance.GetCurrentUser();
             firstname.Text = currentuser.GetFirstName();
             lastname.Text = currentuser.GetLastName();
-            if( currentuser.GetDOB() != null )
+            if( currentuser.GetDOB() != null && currentuser.GetDOB() != DateTime.MinValue)
               DOB.Text = currentuser.GetDOB().ToLongDateString();
             address.Text = currentuser.GetAddress();
             phonenumber.Text = currentuser.GetPhoneNumber();
@@ -91,7 +91,16 @@ namespace Sofware_project
             currentuser.SetAddress(address.Text);
             currentuser.SetFirstName(firstname.Text);
             currentuser.SetLastName(lastname.Text);
-            currentuser.SetDOB(DateTime.Parse(DOB.Text));
+            DateTime DOBDate = DateTime.MinValue;
+            try
+            {
+                DOBDate = DateTime.Parse(DOB.Text);
+            }
+            catch (Exception ex)
+            {
+                DOBDate = DateTime.MinValue;
+            }
+            currentuser.SetDOB(DOBDate);
             currentuser.SetPhoneNumber(phonenumber.Text);
             currentuser.SetEmail(email.Text);
             currentuser.SetPhoto( profileimage.Image);

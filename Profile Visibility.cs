@@ -24,12 +24,20 @@ namespace Sofware_project
 
         private void button2_Click(object sender, EventArgs e)
         {
-
+            this.Hide();
         }
 
         private void Profile_Visibility_Load(object sender, EventArgs e)
         {
 
+        }
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+            User currentuser = LoginUser.GetInstance.GetCurrentUser();
+            int visibility = 0;
+            currentuser.setProfVisibility(visibility);
+            this.Hide();
         }
     }
 }

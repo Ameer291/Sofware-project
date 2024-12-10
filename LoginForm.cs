@@ -106,6 +106,8 @@ namespace Sofware_project
                 else if ( LoginUser.GetInstance.GetCurrentUser().GetMemberType() == 1 )
                 {
                     // display  User activity form here
+                    Form1 FormObj = new Form1(); // Open the main form
+                    FormObj.Show();
                 }
             }
             else
