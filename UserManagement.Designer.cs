@@ -28,16 +28,20 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.components = new System.ComponentModel.Container();
-            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 20F);
-            this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1400, 800);
-            this.MinimumSize = new System.Drawing.Size(1000, 600);
-            this.Name = "UserManagementForm";
-            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
-            this.Text = "User Management";
-            this.ResumeLayout(false);
-            this.PerformLayout();
+            SuspendLayout();
+            // 
+            // UserManagementForm
+            // 
+            AutoScaleDimensions = new SizeF(10F, 25F);
+            AutoScaleMode = AutoScaleMode.Font;
+            ClientSize = new Size(1750, 1000);
+            Margin = new Padding(4, 4, 4, 4);
+            MinimumSize = new Size(1244, 736);
+            Name = "UserManagementForm";
+            StartPosition = FormStartPosition.CenterScreen;
+            Text = "User Management";
+            Load += UserManagementForm_Load;
+            ResumeLayout(false);
         }
 
         #endregion

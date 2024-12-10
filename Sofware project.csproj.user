@@ -43,5 +43,8 @@
     <Compile Update="SettingsPage.cs">
       <SubType>Form</SubType>
     </Compile>
+    <Compile Update="UserManagement.cs">
+      <SubType>Form</SubType>
+    </Compile>
   </ItemGroup>
 </Project>

@@ -180,7 +180,8 @@ namespace tcc
             this.Controls.Add(contentPanel);
 
             // Handle resize events
-            this.Resize += (s, e) => {
+            this.Resize += (s, e) =>
+            {
                 searchLayout.Width = ClientSize.Width - 40;
                 categoryLayout.Width = ClientSize.Width - 40;
                 eventsLayout.Width = ClientSize.Width - 40;
@@ -473,8 +474,8 @@ namespace tcc
                             groupsForm.Show();
                             this.Hide();
                             break;
-                        //case "Home":
-                          //  var dashboardForm = new Dashboard();
+                            //case "Home":
+                            //  var dashboardForm = new Dashboard();
                             //dashboardForm.Show();
                             //this.Hide();
                             //break;
@@ -499,6 +500,11 @@ namespace tcc
                 }
                 MessageBox.Show($"Successfully joined event: {eventTitle}");
             }
+        }
+
+        private void EventsForm_Load(object sender, EventArgs e)
+        {
+
         }
     }
 }

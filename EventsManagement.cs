@@ -7,6 +7,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using tcc;
 
 namespace Sofware_project
 {
@@ -15,6 +16,7 @@ namespace Sofware_project
         EventData eventdataobj1;
         EventData eventdataobj2;
         EventData eventdataobj3;
+        EventsForm newevent;
         int PageNum;
         public EventsManagement()
         {
@@ -23,7 +25,9 @@ namespace Sofware_project
             eventdataobj1 = null;
             eventdataobj2 = null;
             eventdataobj3 = null;
+            this.Size = new Size(1400, 800);
             UpdateEventDetails();
+            newevent = new EventsForm();
             //UpdateEventManagementPage();
 
         }
@@ -33,18 +37,22 @@ namespace Sofware_project
             eventstatus1.Hide();
             eventstatus2.Hide();
             eventstatus3.Hide();
-            if (eventdataobj1.GetEventId() != -1)
+            if (eventdataobj1 != null)
             {
-                eventname1.Text = eventdataobj1.geteventtitle();
-                event_description1.Text = eventdataobj1.geteventdescription();
-                eventdate1.Text = eventdataobj1.geteventDate().ToLongDateString();
-                eventlocation1.Text = eventdataobj1.getLocation();
-                eventorganiser1.Text = eventdataobj1.getorganiser();
-                eventtype1.Text = eventdataobj1.gettypeofevent();
-                duration1.Text = eventdataobj1.Getduration().ToString();
-                String booking = "0/" + eventdataobj1.getmaxnumberofParticipants().ToString() + "Bookings";
-                booking1.Text = booking;
+                totalnum_events.Text = eventdataobj1.GetEventCount().ToString();
+                if (eventdataobj1.GetEventId() != -1)
+                {
+                    eventname1.Text = eventdataobj1.geteventtitle();
+                    event_description1.Text = eventdataobj1.geteventdescription();
+                    eventdate1.Text = eventdataobj1.geteventDate().ToLongDateString();
+                    eventlocation1.Text = eventdataobj1.getLocation();
+                    eventorganiser1.Text = eventdataobj1.getorganiser();
+                    eventtype1.Text = eventdataobj1.gettypeofevent();
+                    duration1.Text = eventdataobj1.Getduration().ToString();
+                    String booking = "0/" + eventdataobj1.getmaxnumberofParticipants().ToString() + "Bookings";
+                    booking1.Text = booking;
 
+                }
             }
             if (eventdataobj2.GetEventId() != -1)
             {
@@ -129,10 +137,8 @@ namespace Sofware_project
         }
         private void eventdelete1_Click(object sender, EventArgs e)
         {
-            //eventdataobj1.DeleteEventFromDB();
-            //UpdateEventDetails();
-            Events_info_create eventobj = new Events_info_create();
-            eventobj.Show();
+            eventdataobj1.DeleteEventFromDB();
+            UpdateEventDetails();
         }
 
         private void eventedit2_Click(object sender, EventArgs e)
@@ -163,6 +169,14 @@ namespace Sofware_project
         {
             eventdataobj3.DeleteEventFromDB();
             UpdateEventDetails();
+        }
+
+        private void button3_Click(object sender, EventArgs e)
+        {
+            Events_info_create eventobj = new Events_info_create();
+            eventobj.FormClosing += new FormClosingEventHandler(this.event_Refresh);
+            eventobj.ShowDialog();
+            this.Refresh();
         }
     }
 }

@@ -18,6 +18,7 @@ namespace Sofware_project
         private DateTime DOB;
         private string Username;
         private Image Photo;
+        int Membertype; // 0 for admin, 1 for member, 2 for non member
 
         public User(string firstname, string lastname, string email, string phonenumber,
             string gender, string address, string username, string Password )
@@ -123,6 +124,16 @@ namespace Sofware_project
         public void SetPhoto(Image Photo)
         {
             this.Photo = Photo;
+
+        }
+        public int GetMemberType()
+        {
+            return this.Membertype;
+        }
+
+        public void SetMemberType(int membertype )
+        {
+            this.Membertype = membertype;
 
         }
 

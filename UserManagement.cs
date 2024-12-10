@@ -4,6 +4,7 @@ using System.Windows.Forms;
 using System.Collections.Generic;
 using System.Linq;
 using System.ComponentModel;
+using Sofware_project;
 
 namespace Software_project
 {
@@ -14,7 +15,10 @@ namespace Software_project
         private ComboBox roleFilter, statusFilter;
         private Panel mainPanel;
         private Label showingLabel;
-
+        private Panel sidebar;
+        private Form childForm;
+        private EventsManagement EMobj;
+        private EventsManagement GroupManagementobj;
         public UserManagementForm()
         {
             InitializeComponent();
@@ -27,6 +31,8 @@ namespace Software_project
             this.Size = new Size(1400, 800);
             this.BackColor = Color.FromArgb(250, 245, 255);
             InitializeUI();
+            EMobj = new EventsManagement();
+            GroupManagementobj = new EventsManagement();
         }
 
         private void InitializeUI()
@@ -459,7 +465,7 @@ namespace Software_project
         }
         private void AddLeftSidebar()
         {
-            Panel sidebar = new Panel
+            sidebar = new Panel
             {
                 Width = 250,
                 Dock = DockStyle.Left,
@@ -491,6 +497,7 @@ namespace Software_project
                     Padding = new Padding(10, 0, 0, 0),
                     FlatAppearance = { BorderSize = 0 }
                 };
+                btn.Click += btn_Click;
                 sidebar.Controls.Add(btn);
                 yPos += 45;
             }
@@ -844,6 +851,59 @@ namespace Software_project
             if (roleBox?.SelectedItem != null) row.Cells[1].Value = roleBox.SelectedItem;
             if (statusBox?.SelectedItem != null) row.Cells[2].Value = statusBox.SelectedItem;
             if (groupsBox != null) row.Cells[5].Value = groupsBox.Text;
+        }
+
+        private void btn_Click(object sender, EventArgs e)
+        {
+            string[] menuItems = {
+                "Dashboard",
+                "Users Management",
+                "Events Management",
+                "Groups Management",
+                "Reports Management",
+                "Settings"
+            };
+            Button btn = sender as Button;
+            if (btn == null)
+               return;
+            foreach (string item in menuItems)
+            {
+                if (btn.Text == "Events Management" && EMobj != null)
+                {
+                    EMobj.Owner = this;
+                    EMobj.StartPosition = FormStartPosition.Manual;
+                    EMobj.Location = new Point(250,25 );
+                    EMobj.Size = new Size( ClientSize.Width - 250, ClientSize.Height );
+                    // eventobj.WindowStartupLocation = 
+                    //eventobj.Left += 480;
+                    //eventobj.Top += 20;
+                    EMobj.Show();
+                    GroupManagementobj.Hide();
+
+                }
+                else if (btn.Text == "Groups Management" && EMobj != null)
+                {
+                    GroupManagementobj.Owner = this;
+                    GroupManagementobj.StartPosition = FormStartPosition.Manual;
+                    GroupManagementobj.Location = new Point(250, 25);
+                    GroupManagementobj.Size = new Size(ClientSize.Width - 250, ClientSize.Height);
+                    // eventobj.WindowStartupLocation = 
+                    //eventobj.Left += 480;
+                    //eventobj.Top += 20;
+                    GroupManagementobj.Show();
+                    EMobj.Hide();
+
+                }
+                else
+                {
+                    GroupManagementobj.Show();
+                    EMobj.Hide();
+                }
+            }
+        }
+        private void UserManagementForm_Load(object sender, EventArgs e)
+        {
+
         }
     }
 }

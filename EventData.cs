@@ -25,7 +25,7 @@ namespace Sofware_project
         string EventStatus;
         string organiser;
         int eventId;
-        float duration;
+        double duration;
         public EventData()
         {
             this.eventId = -1;
@@ -68,6 +68,8 @@ namespace Sofware_project
                             organiser = reader.IsDBNull(7) ? "" : reader.GetString(7);
                             typeofevent = reader.IsDBNull(8) ? "" : reader.GetString(8);
                             EventStatus = reader.IsDBNull(9) ? "" : reader.GetString(9);
+                            duration = reader.IsDBNull(10) ? 1.0f : (float)reader.GetDouble(10);
+
                             // if( !reader.IsDBNull(10))
                             // DOB = (DateTime)reader.GetDateTime(10);
                         }
@@ -76,7 +78,7 @@ namespace Sofware_project
             }
             catch (Exception)
             {
-                MessageBox.Show("Error connecting to database", "Database Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                MessageBox.Show("Error in select Query", "Database Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
             DBcon.CloseDBConnection();
         }
@@ -143,11 +145,11 @@ namespace Sofware_project
         {
             return this.eventId;
         }
-        public void Setduration( float duration )
+        public void Setduration(double duration )
         {
             this.duration = duration;
         }
-        public float Getduration()
+        public double Getduration()
         {
             return this.duration;
         }

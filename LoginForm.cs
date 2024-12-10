@@ -7,6 +7,7 @@ using System.Drawing;
 using System.Windows.Forms;
 using System.Net;
 using static System.Windows.Forms.VisualStyles.VisualStyleElement;
+using Software_project;
 
 namespace Sofware_project
 {
@@ -97,8 +98,15 @@ namespace Sofware_project
                 }
 
                 this.Hide();
-                Form1 mainForm = new Form1(); // Open the main form
-                mainForm.Show();
+                if ( LoginUser.GetInstance.GetCurrentUser().GetMemberType() == 0 )
+                {
+                    UserManagementForm UserManagementObj = new UserManagementForm(); // Open the main form
+                    UserManagementObj.Show();
+                }
+                else if ( LoginUser.GetInstance.GetCurrentUser().GetMemberType() == 1 )
+                {
+                    // display  User activity form here
+                }
             }
             else
             {
