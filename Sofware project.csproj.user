@@ -10,6 +10,9 @@
     <Compile Update="DashboardForm.cs">
       <SubType>Form</SubType>
     </Compile>
+    <Compile Update="Dataandprivacy.cs">
+      <SubType>Form</SubType>
+    </Compile>
     <Compile Update="Events.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -25,7 +28,13 @@
     <Compile Update="Form1.cs">
       <SubType>Form</SubType>
     </Compile>
+    <Compile Update="Groups.cs">
+      <SubType>Form</SubType>
+    </Compile>
     <Compile Update="GroupsForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Update="GroupsManagement.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Update="LoginForm.cs">
