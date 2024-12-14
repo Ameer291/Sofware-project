@@ -178,5 +178,20 @@ namespace Sofware_project
             eventobj.ShowDialog();
             this.Refresh();
         }
+
+        private void booking2_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void event_description1_TextChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void event_description2_TextChanged(object sender, EventArgs e)
+        {
+
+        }
     }
 }

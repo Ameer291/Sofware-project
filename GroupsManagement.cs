@@ -51,5 +51,30 @@ namespace Sofware_project
         {
 
         }
+
+        private void NewEvent_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void group_description1_TextChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void panel6_Paint(object sender, PaintEventArgs e)
+        {
+
+        }
+
+        private void group_description2_TextChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void panel7_Paint(object sender, PaintEventArgs e)
+        {
+
+        }
     }
 }

@@ -36,5 +36,10 @@ namespace Sofware_project
         {
 
         }
+
+        private void group_description_TextChanged(object sender, EventArgs e)
+        {
+
+        }
     }
 }

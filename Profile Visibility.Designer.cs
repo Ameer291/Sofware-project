@@ -46,7 +46,7 @@
             label1.Font = new Font("Segoe UI Semibold", 10.2F, FontStyle.Bold, GraphicsUnit.Point, 0);
             label1.Location = new Point(135, 88);
             label1.Name = "label1";
-            label1.Size = new Size(100, 25);
+            label1.Size = new Size(83, 21);
             label1.TabIndex = 0;
             label1.Text = "Admin only";
             label1.Click += label1_Click;
@@ -59,7 +59,7 @@
             label2.Font = new Font("Segoe UI Semibold", 10.2F, FontStyle.Bold, GraphicsUnit.Point, 0);
             label2.Location = new Point(139, 35);
             label2.Name = "label2";
-            label2.Size = new Size(96, 25);
+            label2.Size = new Size(81, 21);
             label2.TabIndex = 1;
             label2.Text = "Public only";
             // 
@@ -71,7 +71,7 @@
             label3.Font = new Font("Segoe UI Semibold", 10.2F, FontStyle.Bold, GraphicsUnit.Point, 0);
             label3.Location = new Point(32, 142);
             label3.Name = "label3";
-            label3.Size = new Size(203, 25);
+            label3.Size = new Size(165, 21);
             label3.TabIndex = 2;
             label3.Text = "Admin and member only";
             // 
@@ -80,7 +80,7 @@
             checkBox1.AutoSize = true;
             checkBox1.Location = new Point(281, 40);
             checkBox1.Name = "checkBox1";
-            checkBox1.Size = new Size(18, 17);
+            checkBox1.Size = new Size(15, 14);
             checkBox1.TabIndex = 5;
             checkBox1.UseVisualStyleBackColor = true;
             // 
@@ -89,7 +89,7 @@
             checkBox2.AutoSize = true;
             checkBox2.Location = new Point(281, 150);
             checkBox2.Name = "checkBox2";
-            checkBox2.Size = new Size(18, 17);
+            checkBox2.Size = new Size(15, 14);
             checkBox2.TabIndex = 6;
             checkBox2.UseVisualStyleBackColor = true;
             // 
@@ -98,7 +98,7 @@
             checkBox3.AutoSize = true;
             checkBox3.Location = new Point(281, 93);
             checkBox3.Name = "checkBox3";
-            checkBox3.Size = new Size(18, 17);
+            checkBox3.Size = new Size(15, 14);
             checkBox3.TabIndex = 7;
             checkBox3.UseVisualStyleBackColor = true;
             // 
@@ -133,7 +133,7 @@
             // 
             // Profile_Visibility
             // 
-            AutoScaleDimensions = new SizeF(8F, 20F);
+            AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
             BackColor = SystemColors.Window;
             ClientSize = new Size(360, 265);
@@ -148,6 +148,7 @@
             Font = new Font("Segoe UI", 9F, FontStyle.Regular, GraphicsUnit.Point, 0);
             Margin = new Padding(4, 3, 4, 3);
             Name = "Profile_Visibility";
+            StartPosition = FormStartPosition.CenterScreen;
             Text = "Profile Visibility";
             Load += Profile_Visibility_Load;
             ResumeLayout(false);

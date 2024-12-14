@@ -382,3 +382,5 @@ FodyWeavers.xsd
 /bin/Debug/net8.0-windows/Sofware project.dll.config
 /bin/Debug/net8.0-windows/Sofware project.pdb
 /bin/Debug/net8.0-windows/Sofware project.runtimeconfig.json
+/obj/Debug/net8.0-windows/Sofware project.assets.cache
+/obj/Debug/net8.0-windows/Sofware project.csproj.AssemblyReference.cache

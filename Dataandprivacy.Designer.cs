@@ -47,9 +47,10 @@
             button2.FlatAppearance.BorderSize = 0;
             button2.FlatStyle = FlatStyle.Flat;
             button2.Font = new Font("Segoe UI Semibold", 10.2F, FontStyle.Bold, GraphicsUnit.Point, 0);
-            button2.Location = new Point(285, 284);
+            button2.Location = new Point(249, 213);
+            button2.Margin = new Padding(3, 2, 3, 2);
             button2.Name = "button2";
-            button2.Size = new Size(87, 27);
+            button2.Size = new Size(76, 34);
             button2.TabIndex = 17;
             button2.Text = "Cancel";
             button2.UseVisualStyleBackColor = false;
@@ -61,9 +62,10 @@
             button1.FlatAppearance.BorderSize = 0;
             button1.FlatStyle = FlatStyle.Flat;
             button1.Font = new Font("Segoe UI Semibold", 10.2F, FontStyle.Bold, GraphicsUnit.Point, 0);
-            button1.Location = new Point(143, 284);
+            button1.Location = new Point(125, 213);
+            button1.Margin = new Padding(3, 2, 3, 2);
             button1.Name = "button1";
-            button1.Size = new Size(87, 27);
+            button1.Size = new Size(76, 34);
             button1.TabIndex = 16;
             button1.Text = "Save";
             button1.UseVisualStyleBackColor = false;
@@ -71,27 +73,30 @@
             // checkBox3
             // 
             checkBox3.AutoSize = true;
-            checkBox3.Location = new Point(369, 92);
+            checkBox3.Location = new Point(323, 69);
+            checkBox3.Margin = new Padding(3, 2, 3, 2);
             checkBox3.Name = "checkBox3";
-            checkBox3.Size = new Size(18, 17);
+            checkBox3.Size = new Size(15, 14);
             checkBox3.TabIndex = 15;
             checkBox3.UseVisualStyleBackColor = true;
             // 
             // checkBox2
             // 
             checkBox2.AutoSize = true;
-            checkBox2.Location = new Point(369, 149);
+            checkBox2.Location = new Point(323, 112);
+            checkBox2.Margin = new Padding(3, 2, 3, 2);
             checkBox2.Name = "checkBox2";
-            checkBox2.Size = new Size(18, 17);
+            checkBox2.Size = new Size(15, 14);
             checkBox2.TabIndex = 14;
             checkBox2.UseVisualStyleBackColor = true;
             // 
             // checkBox1
             // 
             checkBox1.AutoSize = true;
-            checkBox1.Location = new Point(369, 39);
+            checkBox1.Location = new Point(323, 29);
+            checkBox1.Margin = new Padding(3, 2, 3, 2);
             checkBox1.Name = "checkBox1";
-            checkBox1.Size = new Size(18, 17);
+            checkBox1.Size = new Size(15, 14);
             checkBox1.TabIndex = 13;
             checkBox1.UseVisualStyleBackColor = true;
             // 
@@ -101,9 +106,9 @@
             label3.BackColor = SystemColors.Window;
             label3.BorderStyle = BorderStyle.Fixed3D;
             label3.Font = new Font("Segoe UI Semibold", 10.2F, FontStyle.Bold, GraphicsUnit.Point, 0);
-            label3.Location = new Point(53, 144);
+            label3.Location = new Point(46, 108);
             label3.Name = "label3";
-            label3.Size = new Size(270, 25);
+            label3.Size = new Size(220, 21);
             label3.TabIndex = 12;
             label3.Text = "Use data for targeted advertising ";
             // 
@@ -113,9 +118,9 @@
             label2.BackColor = SystemColors.Window;
             label2.BorderStyle = BorderStyle.Fixed3D;
             label2.Font = new Font("Segoe UI Semibold", 10.2F, FontStyle.Bold, GraphicsUnit.Point, 0);
-            label2.Location = new Point(216, 34);
+            label2.Location = new Point(189, 26);
             label2.Name = "label2";
-            label2.Size = new Size(107, 25);
+            label2.Size = new Size(87, 21);
             label2.TabIndex = 11;
             label2.Text = "Backup data";
             // 
@@ -125,9 +130,9 @@
             label1.BackColor = SystemColors.Window;
             label1.BorderStyle = BorderStyle.Fixed3D;
             label1.Font = new Font("Segoe UI Semibold", 10.2F, FontStyle.Bold, GraphicsUnit.Point, 0);
-            label1.Location = new Point(221, 87);
+            label1.Location = new Point(193, 65);
             label1.Name = "label1";
-            label1.Size = new Size(102, 25);
+            label1.Size = new Size(85, 21);
             label1.TabIndex = 10;
             label1.Text = "Use cookies";
             // 
@@ -137,27 +142,28 @@
             label4.BackColor = SystemColors.Window;
             label4.BorderStyle = BorderStyle.Fixed3D;
             label4.Font = new Font("Segoe UI Semibold", 10.2F, FontStyle.Bold, GraphicsUnit.Point, 0);
-            label4.Location = new Point(53, 200);
+            label4.Location = new Point(46, 150);
             label4.Name = "label4";
-            label4.Size = new Size(272, 25);
+            label4.Size = new Size(223, 21);
             label4.TabIndex = 18;
             label4.Text = "Anonymize user data for analytics";
             // 
             // checkBox4
             // 
             checkBox4.AutoSize = true;
-            checkBox4.Location = new Point(369, 205);
+            checkBox4.Location = new Point(323, 154);
+            checkBox4.Margin = new Padding(3, 2, 3, 2);
             checkBox4.Name = "checkBox4";
-            checkBox4.Size = new Size(18, 17);
+            checkBox4.Size = new Size(15, 14);
             checkBox4.TabIndex = 19;
             checkBox4.UseVisualStyleBackColor = true;
             // 
             // Dataandprivacy
             // 
-            AutoScaleDimensions = new SizeF(8F, 20F);
+            AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
             BackColor = SystemColors.Window;
-            ClientSize = new Size(492, 368);
+            ClientSize = new Size(430, 276);
             Controls.Add(checkBox4);
             Controls.Add(label4);
             Controls.Add(button2);
@@ -168,6 +174,7 @@
             Controls.Add(label3);
             Controls.Add(label2);
             Controls.Add(label1);
+            Margin = new Padding(3, 2, 3, 2);
             Name = "Dataandprivacy";
             Text = "Data and privacy";
             ResumeLayout(false);
