@@ -14,7 +14,7 @@ namespace Sofware_project
         {
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
-            Application.Run(new UserManagementForm()); // Start the application with LoginForm
+            Application.Run(new LoginForm()); // Start the application with LoginForm
         }
     }
 }

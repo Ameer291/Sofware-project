@@ -12,9 +12,11 @@ namespace Sofware_project
 {
     public partial class SettingsPage : Form
     {
+        Profile_Visibility PVObj;
         public SettingsPage()
         {
             InitializeComponent();
+            PVObj = new Profile_Visibility();
             Updateuserdetails();
 
         }
@@ -108,6 +110,12 @@ namespace Sofware_project
         private void member_name_Click(object sender, EventArgs e)
         {
 
+        }
+
+        private void button2_Click(object sender, EventArgs e)
+        {
+            PVObj.Owner = this;
+            PVObj.Show();
         }
     }
 }

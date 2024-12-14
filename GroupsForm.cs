@@ -3,7 +3,7 @@ using System.Drawing;
 using System.Windows.Forms;
 using System.Linq;
 
-namespace tcc
+namespace Software_project
 {
     public partial class GroupsForm : Form
     {

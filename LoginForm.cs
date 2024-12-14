@@ -108,6 +108,8 @@ namespace Sofware_project
                     Form1 Form1obj = new Form1();// Open the main form
                     Form1obj.Show();
                     // display  User activity form here
+                    Form1 FormObj = new Form1(); // Open the main form
+                    FormObj.Show();
                 }
             }
             else

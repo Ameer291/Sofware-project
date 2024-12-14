@@ -1,4 +1,4 @@
-﻿namespace tcc
+﻿namespace Software_project
 {
     partial class EventsForm
     {
@@ -28,17 +28,10 @@
         /// </summary>
         private void InitializeComponent()
         {
-            SuspendLayout();
-            // 
-            // EventsForm
-            // 
-            AutoScaleDimensions = new SizeF(10F, 25F);
-            AutoScaleMode = AutoScaleMode.Font;
-            ClientSize = new Size(800, 450);
-            Name = "EventsForm";
-            Text = "Form1";
-            Load += EventsForm_Load;
-            ResumeLayout(false);
+            this.components = new System.ComponentModel.Container();
+            this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.ClientSize = new System.Drawing.Size(800, 450);
+            this.Text = "Form1";
         }
 
         #endregion
