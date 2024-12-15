@@ -25,6 +25,8 @@ namespace Sofware_project
         private void button1_Click(object sender, EventArgs e)
         {
             User currentuser = LoginUser.GetInstance.GetCurrentUser();
+            if (currentuser == null)
+                return;
             string oldpswdinDB = currentuser.GetPassword();
             if (currentpassword.Text != oldpswdinDB)
             {
@@ -37,6 +39,7 @@ namespace Sofware_project
                 return;
             }
             currentuser.SetPassword(newpswd_edit.Text);
+            this.Close();
 
 
 
@@ -54,7 +57,7 @@ namespace Sofware_project
 
         private void button2_Click(object sender, EventArgs e)
         {
-
+            this.Close();
         }
 
         private void Changepasswordform_Load(object sender, EventArgs e)

@@ -38,6 +38,11 @@ namespace Sofware_project
         {
             return CurrentUser;
         }
+
+        public void RemoveCurrentUser()
+        {
+            this.CurrentUser = null;
+        }
         public bool UpdateToDB()
         {
             try
