@@ -49,6 +49,9 @@
     <Compile Update="RegistrationForm.cs">
       <SubType>Form</SubType>
     </Compile>
+    <Compile Update="ReportManaegement.cs">
+      <SubType>Form</SubType>
+    </Compile>
     <Compile Update="SettingsPage.cs">
       <SubType>Form</SubType>
     </Compile>

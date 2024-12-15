@@ -13,17 +13,21 @@ namespace Sofware_project
     public partial class SettingsPage : Form
     {
         Profile_Visibility PVObj;
+        Dataandprivacy DataPrivacyObj;
         public SettingsPage()
         {
             InitializeComponent();
             PVObj = new Profile_Visibility();
-            PVObj.Owner = this;
+            DataPrivacyObj = new Dataandprivacy();
+            DataPrivacyObj.Owner = this;
             Updateuserdetails();
 
         }
         private void Updateuserdetails()
         {
             User currentuser = LoginUser.GetInstance.GetCurrentUser();
+            if (currentuser == null)
+                return;
             member_name.Text = currentuser.GetUsername();
 
         }
@@ -89,7 +93,12 @@ namespace Sofware_project
 
         private void button4_Click(object sender, EventArgs e)
         {
-
+            User currentuser = LoginUser.GetInstance.GetCurrentUser();
+            if (currentuser == null)
+                return;
+            currentuser.DeleteUserFromDB();
+            LoginUser.GetInstance.RemoveCurrentUser();
+            this.Close();
         }
 
         private void label14_Click(object sender, EventArgs e)
@@ -123,6 +132,11 @@ namespace Sofware_project
         private void member_since_Click(object sender, EventArgs e)
         {
 
+        }
+
+        private void button3_Click(object sender, EventArgs e)
+        {
+            DataPrivacyObj.Show();
         }
     }
 }

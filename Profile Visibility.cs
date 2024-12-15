@@ -35,6 +35,8 @@ namespace Sofware_project
         private void button1_Click(object sender, EventArgs e)
         {
             User currentuser = LoginUser.GetInstance.GetCurrentUser();
+            if (currentuser == null)
+                return;
             int visibility = 0;
             currentuser.setProfVisibility(visibility);
             this.Hide();

@@ -19,6 +19,7 @@ namespace Software_project
         private Form childForm;
         private EventsManagement EMobj;
         private GroupsManagement GroupManagementobj;
+        private ReportManaegement ReportManagementobj;
         public UserManagementForm()
         {
             InitializeComponent();
@@ -33,6 +34,7 @@ namespace Software_project
             InitializeUI();
             EMobj = new EventsManagement();
             GroupManagementobj = new GroupsManagement();
+            ReportManagementobj = new ReportManaegement();
         }
 
         private void InitializeUI()
@@ -879,6 +881,7 @@ namespace Software_project
                     //eventobj.Top += 20;
                     EMobj.Show();
                     GroupManagementobj.Hide();
+                    ReportManagementobj.Hide();
 
                 }
                 else if (btn.Text == "Groups Management" && EMobj != null)
@@ -895,10 +898,22 @@ namespace Software_project
                     //eventobj.Top += 20;
                     GroupManagementobj.Show();
                     EMobj.Hide();
+                    ReportManagementobj.Hide();
 
+                }
+                else if (btn.Text == "Reports Management" && EMobj != null)
+                {
+                    ReportManagementobj.Owner = this;
+                    ReportManagementobj.StartPosition = FormStartPosition.Manual;
+                    ReportManagementobj.Location = new Point(this.Left + 250, this.Top + 30);
+                    ReportManagementobj.Size = new Size(ClientSize.Width - 250, ClientSize.Height);
+                    ReportManagementobj.Show();
+                    GroupManagementobj.Hide();
+                    EMobj.Hide();
                 }
                 else
                 {
+                    ReportManagementobj.Hide();
                     GroupManagementobj.Hide();
                     EMobj.Hide();
                 }

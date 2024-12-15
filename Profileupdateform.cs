@@ -23,6 +23,8 @@ namespace Sofware_project
         private void Updateuserdetails()
         {
             User currentuser = LoginUser.GetInstance.GetCurrentUser();
+            if (currentuser == null)
+                return;
             firstname.Text = currentuser.GetFirstName();
             lastname.Text = currentuser.GetLastName();
             if( currentuser.GetDOB() != null && currentuser.GetDOB() != DateTime.MinValue)
@@ -50,6 +52,8 @@ namespace Sofware_project
 
                 profileimage.Image = myBitmap;
                 User currentuser = LoginUser.GetInstance.GetCurrentUser();
+                if (currentuser == null)
+                    return;
                 currentuser.SetPhoto( myBitmap );
             }
         }
@@ -88,6 +92,8 @@ namespace Sofware_project
         private void button1_Click(object sender, EventArgs e)
         {
             User currentuser = LoginUser.GetInstance.GetCurrentUser();
+            if (currentuser == null)
+                return;
             currentuser.SetAddress(address.Text);
             currentuser.SetFirstName(firstname.Text);
             currentuser.SetLastName(lastname.Text);

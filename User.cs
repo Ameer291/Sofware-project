@@ -1,9 +1,14 @@
-﻿using System;
+﻿using Microsoft.Data.SqlClient;
+using System;
 using System.Collections.Generic;
 using System.Linq;
+using System.Net;
 using System.Reflection;
 using System.Text;
 using System.Threading.Tasks;
+using static System.Windows.Forms.VisualStyles.VisualStyleElement.ListView;
+using static System.Windows.Forms.VisualStyles.VisualStyleElement.StartPanel;
+using static System.Windows.Forms.VisualStyles.VisualStyleElement;
 
 namespace Sofware_project
 {
@@ -141,6 +146,40 @@ namespace Sofware_project
         public void setProfVisibility( int visibility )
         {
             this.profilevisibility = visibility;
+        }
+
+        public bool DeleteUserFromDB()
+        {
+            try
+            {
+                DBConnection DBcon = new DBConnection();
+                SqlConnection sqlcon = DBcon.ConnectDB();
+                var query = "DELETE from Users " +
+                    " WHERE UserName = '" + this.GetUsername() + "'";
+
+                using (var cmd = new SqlCommand(query, sqlcon))
+                {
+                    cmd.ExecuteNonQuery();
+                    return true;
+                }
+                DBcon.CloseDBConnection();
+                this.FirstName = "";
+                this.LastName = "";
+                this.Gender = "";
+                this.Address = "";
+                this.Username = "";
+                this.Email = "";
+                this.PhoneNumber = "";
+                this.Password = "";
+                this.Membertype = 1;
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show("Error in updating to event database: " + ex.Message, "Database Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                return false;
+            }
+
+            return true;
         }
 
     }

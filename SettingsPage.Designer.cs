@@ -80,7 +80,7 @@
             label1.AutoSize = true;
             label1.Location = new Point(22, 15);
             label1.Name = "label1";
-            label1.Size = new Size(0, 15);
+            label1.Size = new Size(0, 25);
             label1.TabIndex = 0;
             label1.Click += label1_Click;
             // 
@@ -112,7 +112,7 @@
             member_since.AutoSize = true;
             member_since.Location = new Point(73, 72);
             member_since.Name = "member_since";
-            member_since.Size = new Size(82, 15);
+            member_since.Size = new Size(118, 25);
             member_since.TabIndex = 5;
             member_since.Text = "member since";
             member_since.Click += member_since_Click;
@@ -123,7 +123,7 @@
             member_type.Font = new Font("Segoe UI", 10.2F, FontStyle.Regular, GraphicsUnit.Point, 0);
             member_type.Location = new Point(73, 39);
             member_type.Name = "member_type";
-            member_type.Size = new Size(91, 19);
+            member_type.Size = new Size(130, 30);
             member_type.TabIndex = 4;
             member_type.Text = "member type";
             member_type.Click += label3_Click;
@@ -134,7 +134,7 @@
             member_name.Font = new Font("Segoe UI", 10.8F, FontStyle.Bold, GraphicsUnit.Point, 0);
             member_name.Location = new Point(73, 10);
             member_name.Name = "member_name";
-            member_name.Size = new Size(48, 20);
+            member_name.Size = new Size(70, 30);
             member_name.TabIndex = 3;
             member_name.Text = "name";
             member_name.Click += member_name_Click;
@@ -147,7 +147,7 @@
             account_setting.ForeColor = SystemColors.ControlDarkDark;
             account_setting.Location = new Point(23, 9);
             account_setting.Name = "account_setting";
-            account_setting.Size = new Size(254, 15);
+            account_setting.Size = new Size(382, 25);
             account_setting.TabIndex = 2;
             account_setting.Text = "Manage your account settings and preferences";
             account_setting.Click += label2_Click;
@@ -158,7 +158,7 @@
             account_info.Font = new Font("Segoe UI", 11.25F, FontStyle.Bold, GraphicsUnit.Point, 0);
             account_info.Location = new Point(61, 173);
             account_info.Name = "account_info";
-            account_info.Size = new Size(67, 20);
+            account_info.Size = new Size(92, 30);
             account_info.TabIndex = 3;
             account_info.Text = "Account";
             account_info.Click += label2_Click_1;
@@ -194,7 +194,7 @@
             label3.AutoSize = true;
             label3.Location = new Point(23, 46);
             label3.Name = "label3";
-            label3.Size = new Size(220, 15);
+            label3.Size = new Size(337, 25);
             label3.TabIndex = 1;
             label3.Text = "Update your photos and personal details";
             // 
@@ -204,7 +204,7 @@
             profile_info.Font = new Font("Segoe UI Semibold", 10.2F, FontStyle.Bold, GraphicsUnit.Point, 0);
             profile_info.Location = new Point(24, 18);
             profile_info.Name = "profile_info";
-            profile_info.Size = new Size(128, 19);
+            profile_info.Size = new Size(194, 30);
             profile_info.TabIndex = 0;
             profile_info.Text = "Profile Information";
             profile_info.Click += label2_Click_2;
@@ -215,7 +215,7 @@
             label2.Font = new Font("Segoe UI", 11.25F, FontStyle.Bold, GraphicsUnit.Point, 0);
             label2.Location = new Point(61, 309);
             label2.Name = "label2";
-            label2.Size = new Size(100, 20);
+            label2.Size = new Size(135, 30);
             label2.TabIndex = 5;
             label2.Text = "Notifications";
             // 
@@ -256,7 +256,7 @@
             label5.AutoSize = true;
             label5.Location = new Point(24, 105);
             label5.Name = "label5";
-            label5.Size = new Size(113, 15);
+            label5.Size = new Size(169, 25);
             label5.TabIndex = 3;
             label5.Text = "Mobile notifications";
             // 
@@ -266,7 +266,7 @@
             label6.Font = new Font("Segoe UI Semibold", 10.2F, FontStyle.Bold, GraphicsUnit.Point, 0);
             label6.Location = new Point(23, 76);
             label6.Name = "label6";
-            label6.Size = new Size(125, 19);
+            label6.Size = new Size(186, 30);
             label6.TabIndex = 2;
             label6.Text = "Push Notifications";
             // 
@@ -275,7 +275,7 @@
             label7.AutoSize = true;
             label7.Location = new Point(24, 40);
             label7.Name = "label7";
-            label7.Size = new Size(116, 15);
+            label7.Size = new Size(178, 25);
             label7.TabIndex = 1;
             label7.Text = "Update about events";
             // 
@@ -285,7 +285,7 @@
             label8.Font = new Font("Segoe UI Semibold", 10.2F, FontStyle.Bold, GraphicsUnit.Point, 0);
             label8.Location = new Point(23, 10);
             label8.Name = "label8";
-            label8.Size = new Size(129, 19);
+            label8.Size = new Size(192, 30);
             label8.TabIndex = 0;
             label8.Text = "Email Notifications";
             // 
@@ -316,6 +316,7 @@
             button3.Size = new Size(28, 26);
             button3.TabIndex = 6;
             button3.UseVisualStyleBackColor = true;
+            button3.Click += button3_Click;
             // 
             // button2
             // 
@@ -336,7 +337,7 @@
             label9.AutoSize = true;
             label9.Location = new Point(25, 96);
             label9.Name = "label9";
-            label9.Size = new Size(103, 15);
+            label9.Size = new Size(157, 25);
             label9.TabIndex = 3;
             label9.Text = "Manage your data";
             // 
@@ -346,7 +347,7 @@
             label10.Font = new Font("Segoe UI Semibold", 10.2F, FontStyle.Bold, GraphicsUnit.Point, 0);
             label10.Location = new Point(23, 71);
             label10.Name = "label10";
-            label10.Size = new Size(114, 19);
+            label10.Size = new Size(174, 30);
             label10.TabIndex = 2;
             label10.Text = "Data and Privacy";
             // 
@@ -355,7 +356,7 @@
             label11.AutoSize = true;
             label11.Location = new Point(23, 35);
             label11.Name = "label11";
-            label11.Size = new Size(165, 15);
+            label11.Size = new Size(251, 25);
             label11.TabIndex = 1;
             label11.Text = "Manage who sees your profile";
             // 
@@ -365,7 +366,7 @@
             label12.Font = new Font("Segoe UI Semibold", 10.2F, FontStyle.Bold, GraphicsUnit.Point, 0);
             label12.Location = new Point(23, 10);
             label12.Name = "label12";
-            label12.Size = new Size(109, 19);
+            label12.Size = new Size(159, 30);
             label12.TabIndex = 0;
             label12.Text = "Profile Visibility";
             // 
@@ -375,7 +376,7 @@
             label13.Font = new Font("Segoe UI", 11.25F, FontStyle.Bold, GraphicsUnit.Point, 0);
             label13.Location = new Point(61, 513);
             label13.Name = "label13";
-            label13.Size = new Size(59, 20);
+            label13.Size = new Size(81, 30);
             label13.TabIndex = 8;
             label13.Text = "Privacy";
             // 
@@ -412,7 +413,7 @@
             label15.AutoSize = true;
             label15.Location = new Point(23, 34);
             label15.Name = "label15";
-            label15.Size = new Size(151, 15);
+            label15.Size = new Size(228, 25);
             label15.TabIndex = 1;
             label15.Text = "Delete all data permenantly";
             // 
@@ -423,7 +424,7 @@
             label14.ForeColor = Color.Red;
             label14.Location = new Point(23, 11);
             label14.Name = "label14";
-            label14.Size = new Size(103, 19);
+            label14.Size = new Size(156, 30);
             label14.TabIndex = 0;
             label14.Text = "Delete account";
             label14.Click += label14_Click;
@@ -462,7 +463,7 @@
             // 
             // SettingsPage
             // 
-            AutoScaleDimensions = new SizeF(7F, 15F);
+            AutoScaleDimensions = new SizeF(10F, 25F);
             AutoScaleMode = AutoScaleMode.Font;
             AutoScroll = true;
             BackColor = SystemColors.Window;
