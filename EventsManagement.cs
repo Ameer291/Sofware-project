@@ -16,7 +16,7 @@ namespace Sofware_project
         EventData eventdataobj1;
         EventData eventdataobj2;
         EventData eventdataobj3;
-        EventsForm newevent;
+        
         int PageNum;
         public EventsManagement()
         {
