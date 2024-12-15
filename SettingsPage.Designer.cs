@@ -112,9 +112,10 @@
             member_since.AutoSize = true;
             member_since.Location = new Point(73, 72);
             member_since.Name = "member_since";
-            member_since.Size = new Size(79, 15);
+            member_since.Size = new Size(82, 15);
             member_since.TabIndex = 5;
-            member_since.Text = "membersince";
+            member_since.Text = "member since";
+            member_since.Click += member_since_Click;
             // 
             // member_type
             // 
@@ -122,9 +123,9 @@
             member_type.Font = new Font("Segoe UI", 10.2F, FontStyle.Regular, GraphicsUnit.Point, 0);
             member_type.Location = new Point(73, 39);
             member_type.Name = "member_type";
-            member_type.Size = new Size(87, 19);
+            member_type.Size = new Size(91, 19);
             member_type.TabIndex = 4;
-            member_type.Text = "membertype";
+            member_type.Text = "member type";
             member_type.Click += label3_Click;
             // 
             // member_name

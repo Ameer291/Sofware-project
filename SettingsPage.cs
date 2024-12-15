@@ -17,6 +17,7 @@ namespace Sofware_project
         {
             InitializeComponent();
             PVObj = new Profile_Visibility();
+            PVObj.Owner = this;
             Updateuserdetails();
 
         }
@@ -114,8 +115,14 @@ namespace Sofware_project
 
         private void button2_Click(object sender, EventArgs e)
         {
-            PVObj.Owner = this;
+
             PVObj.Show();
+
+        }
+
+        private void member_since_Click(object sender, EventArgs e)
+        {
+
         }
     }
 }

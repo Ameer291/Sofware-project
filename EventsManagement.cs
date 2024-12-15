@@ -7,7 +7,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
-using tcc;
+
 
 namespace Sofware_project
 {
@@ -16,7 +16,6 @@ namespace Sofware_project
         EventData eventdataobj1;
         EventData eventdataobj2;
         EventData eventdataobj3;
-        EventsForm newevent;
         int PageNum;
         public EventsManagement()
         {
@@ -27,7 +26,7 @@ namespace Sofware_project
             eventdataobj3 = null;
             this.Size = new Size(1400, 800);
             UpdateEventDetails();
-            newevent = new EventsForm();
+            
             //UpdateEventManagementPage();
 
         }
