@@ -9,6 +9,7 @@ using System.Threading.Tasks;
 using static System.Windows.Forms.VisualStyles.VisualStyleElement.ListView;
 using static System.Windows.Forms.VisualStyles.VisualStyleElement.StartPanel;
 using static System.Windows.Forms.VisualStyles.VisualStyleElement;
+using Microsoft.VisualBasic.ApplicationServices;
 
 namespace Sofware_project
 {
@@ -114,6 +115,10 @@ namespace Sofware_project
             this.DOB = DOB;
 
         }
+        public void SetUserType(int usertype)
+        {
+            this.Membertype = usertype;
+        }
         public string GetPassword()
         {
             return this.Password;
@@ -147,7 +152,10 @@ namespace Sofware_project
         {
             this.profilevisibility = visibility;
         }
-
+        public int GetUserID()
+        {
+            return 1;
+        }
         public bool DeleteUserFromDB()
         {
             try

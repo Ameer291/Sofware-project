@@ -59,6 +59,7 @@ namespace Sofware_project
                             String phonenumber = reader.IsDBNull(13) ? "" : reader.GetString(13);
                             String address = reader.IsDBNull(13) ? "" : reader.GetString(12);
                             String password = reader.IsDBNull(3) ? "" : reader.GetString(3);
+                            int usertype = reader.IsDBNull(15) ?1 : reader.GetInt32(15);
                             //if( !reader.IsDBNull(10))
                             //    DOB = (DateTime)reader.GetDateTime(10);
 
@@ -66,6 +67,7 @@ namespace Sofware_project
                             User CurrentUsrObj = new Member( firstname, lastname, email, phonenumber,
                                                              gender, address, username, password);
                             CurrentUsrObj.SetDOB( DOB);
+                            CurrentUsrObj.SetUserType(usertype);
                             LoginUser.GetInstance.SetCurrentUser(CurrentUsrObj);
                         }
                     }
@@ -73,7 +75,7 @@ namespace Sofware_project
             }
             catch (Exception)
             {
-                MessageBox.Show("Error cin select query", "Database Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                MessageBox.Show("Error in select query", "Database Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
         }
         private void btnLogin_Click(object sender, EventArgs e)
@@ -107,8 +109,8 @@ namespace Sofware_project
                 }
                 else if ( LoginUser.GetInstance.GetCurrentUser().GetMemberType() == 1 )
                 {
-                    Form1 Form1obj = new Form1();// Open the main form
-                    Form1obj.Show();
+                    DashboardForm DashboardForm = new DashboardForm();// Open the main form
+                    DashboardForm.Show();
                 }
             }
             else

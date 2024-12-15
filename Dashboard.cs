@@ -14,7 +14,7 @@ namespace Sofware_project
     {
         public Dashboard()
         {
-            InitializeComponent();
+            //InitializeComponent();
         }
     }
 }
