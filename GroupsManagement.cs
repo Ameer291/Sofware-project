@@ -12,6 +12,7 @@ namespace Sofware_project
 {
     public partial class GroupsManagement : Form
     {
+        
         public GroupsManagement()
         {
             InitializeComponent();
@@ -54,7 +55,9 @@ namespace Sofware_project
 
         private void NewEvent_Click(object sender, EventArgs e)
         {
-
+            Groups Addgroupobj = new Groups();
+            Addgroupobj.ShowDialog();
+            this.Refresh();
         }
 
         private void group_description1_TextChanged(object sender, EventArgs e)

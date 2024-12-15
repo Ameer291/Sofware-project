@@ -41,5 +41,15 @@ namespace Sofware_project
         {
 
         }
+
+        private void button2_Click(object sender, EventArgs e)
+        {
+            this.Close();
+        }
+
+        private void add_group_Click(object sender, EventArgs e)
+        {
+            this.Close();
+        }
     }
 }

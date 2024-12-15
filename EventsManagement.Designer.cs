@@ -38,6 +38,8 @@
             totalnum_attendees = new Label();
             label3 = new Label();
             panel4 = new Panel();
+            event_status = new ComboBox();
+            event_categories = new ComboBox();
             panel11 = new Panel();
             eventsearch_admins = new TextBox();
             panel6 = new Panel();
@@ -81,8 +83,6 @@
             label9 = new Label();
             panel5 = new Panel();
             NewEvent = new Button();
-            event_categories = new ComboBox();
-            event_status = new ComboBox();
             button1 = new Button();
             button2 = new Button();
             button6 = new Button();
@@ -140,9 +140,10 @@
             activenum_events.AutoSize = true;
             activenum_events.Location = new Point(14, 48);
             activenum_events.Name = "activenum_events";
-            activenum_events.Size = new Size(49, 15);
+            activenum_events.Size = new Size(14, 15);
             activenum_events.TabIndex = 5;
-            activenum_events.Text = "number";
+            activenum_events.Text = "4";
+            activenum_events.Click += activenum_events_Click;
             // 
             // label2
             // 
@@ -169,9 +170,10 @@
             totalnum_attendees.AutoSize = true;
             totalnum_attendees.Location = new Point(20, 48);
             totalnum_attendees.Name = "totalnum_attendees";
-            totalnum_attendees.Size = new Size(49, 15);
+            totalnum_attendees.Size = new Size(28, 15);
             totalnum_attendees.TabIndex = 4;
-            totalnum_attendees.Text = "number";
+            totalnum_attendees.Text = "236";
+            totalnum_attendees.Click += totalnum_attendees_Click;
             // 
             // label3
             // 
@@ -195,6 +197,34 @@
             panel4.RightToLeft = RightToLeft.No;
             panel4.Size = new Size(1000, 39);
             panel4.TabIndex = 2;
+            // 
+            // event_status
+            // 
+            event_status.BackColor = Color.FromArgb(192, 192, 255);
+            event_status.FlatStyle = FlatStyle.Flat;
+            event_status.Font = new Font("Segoe UI Semibold", 9F, FontStyle.Bold, GraphicsUnit.Point, 0);
+            event_status.FormattingEnabled = true;
+            event_status.Items.AddRange(new object[] { "Upcoming", "Active", "Completed", "Draft" });
+            event_status.Location = new Point(879, 7);
+            event_status.Margin = new Padding(3, 2, 3, 2);
+            event_status.Name = "event_status";
+            event_status.Size = new Size(97, 23);
+            event_status.TabIndex = 9;
+            event_status.Text = "All Status";
+            // 
+            // event_categories
+            // 
+            event_categories.BackColor = Color.FromArgb(192, 192, 255);
+            event_categories.FlatStyle = FlatStyle.Flat;
+            event_categories.Font = new Font("Segoe UI Semibold", 9F, FontStyle.Bold, GraphicsUnit.Point, 0);
+            event_categories.FormattingEnabled = true;
+            event_categories.Items.AddRange(new object[] { "Art", "Wellness", "Workshop", "Social" });
+            event_categories.Location = new Point(750, 7);
+            event_categories.Margin = new Padding(3, 2, 3, 2);
+            event_categories.Name = "event_categories";
+            event_categories.Size = new Size(110, 23);
+            event_categories.TabIndex = 8;
+            event_categories.Text = "All Categories";
             // 
             // panel11
             // 
@@ -694,34 +724,6 @@
             NewEvent.Text = "Create Event";
             NewEvent.UseVisualStyleBackColor = false;
             NewEvent.Click += button3_Click;
-            // 
-            // event_categories
-            // 
-            event_categories.BackColor = Color.FromArgb(192, 192, 255);
-            event_categories.FlatStyle = FlatStyle.Flat;
-            event_categories.Font = new Font("Segoe UI Semibold", 9F, FontStyle.Bold, GraphicsUnit.Point, 0);
-            event_categories.FormattingEnabled = true;
-            event_categories.Items.AddRange(new object[] { "Art", "Wellness", "Workshop", "Social" });
-            event_categories.Location = new Point(750, 7);
-            event_categories.Margin = new Padding(3, 2, 3, 2);
-            event_categories.Name = "event_categories";
-            event_categories.Size = new Size(110, 23);
-            event_categories.TabIndex = 8;
-            event_categories.Text = "All Categories";
-            // 
-            // event_status
-            // 
-            event_status.BackColor = Color.FromArgb(192, 192, 255);
-            event_status.FlatStyle = FlatStyle.Flat;
-            event_status.Font = new Font("Segoe UI Semibold", 9F, FontStyle.Bold, GraphicsUnit.Point, 0);
-            event_status.FormattingEnabled = true;
-            event_status.Items.AddRange(new object[] { "Upcoming", "Active", "Completed", "Draft" });
-            event_status.Location = new Point(879, 7);
-            event_status.Margin = new Padding(3, 2, 3, 2);
-            event_status.Name = "event_status";
-            event_status.Size = new Size(97, 23);
-            event_status.TabIndex = 9;
-            event_status.Text = "All Status";
             // 
             // button1
             // 

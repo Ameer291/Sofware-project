@@ -178,6 +178,7 @@
             button2.TabIndex = 25;
             button2.Text = "Cancel";
             button2.UseVisualStyleBackColor = false;
+            button2.Click += button2_Click;
             // 
             // add_group
             // 
@@ -190,6 +191,7 @@
             add_group.TabIndex = 24;
             add_group.Text = "Add";
             add_group.UseVisualStyleBackColor = false;
+            add_group.Click += add_group_Click;
             // 
             // Groups
             // 

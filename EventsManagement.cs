@@ -16,7 +16,7 @@ namespace Sofware_project
         EventData eventdataobj1;
         EventData eventdataobj2;
         EventData eventdataobj3;
-        
+
         int PageNum;
         public EventsManagement()
         {
@@ -27,7 +27,7 @@ namespace Sofware_project
             eventdataobj3 = null;
             this.Size = new Size(1400, 800);
             UpdateEventDetails();
-            
+
             //UpdateEventManagementPage();
 
         }
@@ -48,7 +48,7 @@ namespace Sofware_project
                     eventlocation1.Text = eventdataobj1.getLocation();
                     eventorganiser1.Text = eventdataobj1.getorganiser();
                     eventtype1.Text = eventdataobj1.gettypeofevent();
-                    duration1.Text = eventdataobj1.Getduration().ToString();
+                    duration1.Text = " Duration: " + eventdataobj1.Getduration().ToString() + " hrs";
                     String booking = "0/" + eventdataobj1.getmaxnumberofParticipants().ToString() + "Bookings";
                     booking1.Text = booking;
 
@@ -63,7 +63,7 @@ namespace Sofware_project
                 eventlocation2.Text = eventdataobj2.getLocation();
                 eventorganiser2.Text = eventdataobj2.getorganiser();
                 eventtype2.Text = eventdataobj2.gettypeofevent();
-                duration2.Text = eventdataobj2.Getduration().ToString();
+                duration2.Text = " Duration: " + eventdataobj2.Getduration().ToString() + " hrs";
                 String booking = "0/" + eventdataobj2.getmaxnumberofParticipants().ToString() + "Bookings";
                 booking2.Text = booking;
             }
@@ -78,7 +78,7 @@ namespace Sofware_project
                 eventlocation3.Text = eventdataobj3.getLocation();
                 eventorganiser3.Text = eventdataobj3.getorganiser();
                 eventtype3.Text = eventdataobj3.gettypeofevent();
-                duration3.Text = eventdataobj3.Getduration().ToString();
+                duration3.Text = " Duration: " + eventdataobj3.Getduration().ToString() + " hrs";
                 String booking = "0/" + eventdataobj3.getmaxnumberofParticipants().ToString() + "Bookings";
                 booking3.Text = booking;
             }
@@ -190,6 +190,16 @@ namespace Sofware_project
         }
 
         private void event_description2_TextChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void activenum_events_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void totalnum_attendees_Click(object sender, EventArgs e)
         {
 
         }

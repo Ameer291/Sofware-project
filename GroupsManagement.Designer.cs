@@ -131,9 +131,9 @@
             num_members1.Font = new Font("Segoe UI", 10.2F, FontStyle.Regular, GraphicsUnit.Point, 0);
             num_members1.Location = new Point(8, 188);
             num_members1.Name = "num_members1";
-            num_members1.Size = new Size(100, 19);
+            num_members1.Size = new Size(94, 19);
             num_members1.TabIndex = 14;
-            num_members1.Text = "num_members";
+            num_members1.Text = "156 members";
             // 
             // eventorganiser1
             // 
@@ -141,9 +141,9 @@
             eventorganiser1.Font = new Font("Segoe UI", 10.2F, FontStyle.Regular, GraphicsUnit.Point, 0);
             eventorganiser1.Location = new Point(6, 328);
             eventorganiser1.Name = "eventorganiser1";
-            eventorganiser1.Size = new Size(74, 19);
+            eventorganiser1.Size = new Size(163, 19);
             eventorganiser1.TabIndex = 11;
-            eventorganiser1.Text = "organiser1";
+            eventorganiser1.Text = "Created by Emma Wilson";
             // 
             // active_since1
             // 
@@ -151,9 +151,9 @@
             active_since1.Font = new Font("Segoe UI", 10.2F, FontStyle.Regular, GraphicsUnit.Point, 0);
             active_since1.Location = new Point(8, 282);
             active_since1.Name = "active_since1";
-            active_since1.Size = new Size(78, 19);
+            active_since1.Size = new Size(124, 19);
             active_since1.TabIndex = 9;
-            active_since1.Text = "active since";
+            active_since1.Text = "Active 2 hours ago";
             // 
             // num_events1
             // 
@@ -161,9 +161,9 @@
             num_events1.Font = new Font("Segoe UI", 10.2F, FontStyle.Regular, GraphicsUnit.Point, 0);
             num_events1.Location = new Point(8, 233);
             num_events1.Name = "num_events1";
-            num_events1.Size = new Size(83, 19);
+            num_events1.Size = new Size(69, 19);
             num_events1.TabIndex = 6;
-            num_events1.Text = "num_events";
+            num_events1.Text = "12 events";
             num_events1.Click += eventtime1_Click;
             // 
             // group_description1
@@ -177,6 +177,7 @@
             group_description1.ReadOnly = true;
             group_description1.Size = new Size(281, 67);
             group_description1.TabIndex = 3;
+            group_description1.Text = "A community for photography lovers to share their work and ideas.";
             group_description1.TextChanged += group_description1_TextChanged;
             // 
             // groupname1
@@ -185,9 +186,9 @@
             groupname1.Font = new Font("Segoe UI", 12F, FontStyle.Bold, GraphicsUnit.Point, 0);
             groupname1.Location = new Point(14, 74);
             groupname1.Name = "groupname1";
-            groupname1.Size = new Size(69, 21);
+            groupname1.Size = new Size(200, 21);
             groupname1.TabIndex = 1;
-            groupname1.Text = "group 1";
+            groupname1.Text = "Photography Enthusiasts";
             groupname1.Click += eventname1_Click;
             // 
             // label9
@@ -262,6 +263,7 @@
             group_description2.ReadOnly = true;
             group_description2.Size = new Size(281, 67);
             group_description2.TabIndex = 4;
+            group_description2.Text = "Daily meditation sessions and mindfulness.\n";
             group_description2.TextChanged += group_description2_TextChanged;
             // 
             // label4
@@ -270,9 +272,9 @@
             label4.Font = new Font("Segoe UI", 10.2F, FontStyle.Regular, GraphicsUnit.Point, 0);
             label4.Location = new Point(12, 188);
             label4.Name = "label4";
-            label4.Size = new Size(100, 19);
+            label4.Size = new Size(94, 19);
             label4.TabIndex = 18;
-            label4.Text = "num_members";
+            label4.Text = "230 members";
             // 
             // label5
             // 
@@ -280,9 +282,9 @@
             label5.Font = new Font("Segoe UI", 10.2F, FontStyle.Regular, GraphicsUnit.Point, 0);
             label5.Location = new Point(12, 328);
             label5.Name = "label5";
-            label5.Size = new Size(74, 19);
+            label5.Size = new Size(171, 19);
             label5.TabIndex = 17;
-            label5.Text = "organiser1";
+            label5.Text = "Created by Michael Chang";
             // 
             // label6
             // 
@@ -290,9 +292,9 @@
             label6.Font = new Font("Segoe UI", 10.2F, FontStyle.Regular, GraphicsUnit.Point, 0);
             label6.Location = new Point(12, 282);
             label6.Name = "label6";
-            label6.Size = new Size(78, 19);
+            label6.Size = new Size(118, 19);
             label6.TabIndex = 16;
-            label6.Text = "active since";
+            label6.Text = "Active 1 hour ago";
             // 
             // label7
             // 
@@ -300,9 +302,9 @@
             label7.Font = new Font("Segoe UI", 10.2F, FontStyle.Regular, GraphicsUnit.Point, 0);
             label7.Location = new Point(12, 233);
             label7.Name = "label7";
-            label7.Size = new Size(83, 19);
+            label7.Size = new Size(61, 19);
             label7.TabIndex = 15;
-            label7.Text = "num_events";
+            label7.Text = "8 events";
             // 
             // groupname2
             // 
@@ -310,9 +312,9 @@
             groupname2.Font = new Font("Segoe UI", 12F, FontStyle.Bold, GraphicsUnit.Point, 0);
             groupname2.Location = new Point(12, 74);
             groupname2.Name = "groupname2";
-            groupname2.Size = new Size(69, 21);
+            groupname2.Size = new Size(197, 21);
             groupname2.TabIndex = 2;
-            groupname2.Text = "group 2";
+            groupname2.Text = "Mindfulness & Meditation";
             // 
             // panel4
             // 
@@ -397,9 +399,9 @@
             activenum_members.AutoSize = true;
             activenum_members.Location = new Point(12, 36);
             activenum_members.Name = "activenum_members";
-            activenum_members.Size = new Size(49, 15);
+            activenum_members.Size = new Size(25, 15);
             activenum_members.TabIndex = 5;
-            activenum_members.Text = "number";
+            activenum_members.Text = "685";
             // 
             // label2
             // 
@@ -427,9 +429,9 @@
             monthly_events.AutoSize = true;
             monthly_events.Location = new Point(18, 36);
             monthly_events.Name = "monthly_events";
-            monthly_events.Size = new Size(49, 15);
+            monthly_events.Size = new Size(19, 15);
             monthly_events.TabIndex = 4;
-            monthly_events.Text = "number";
+            monthly_events.Text = "22";
             // 
             // label3
             // 
@@ -457,9 +459,9 @@
             totalnum_groups.AutoSize = true;
             totalnum_groups.Location = new Point(23, 36);
             totalnum_groups.Name = "totalnum_groups";
-            totalnum_groups.Size = new Size(49, 15);
+            totalnum_groups.Size = new Size(19, 15);
             totalnum_groups.TabIndex = 1;
-            totalnum_groups.Text = "number";
+            totalnum_groups.Text = "23";
             // 
             // label1
             // 
@@ -477,9 +479,9 @@
             groupname3.Font = new Font("Segoe UI", 12F, FontStyle.Bold, GraphicsUnit.Point, 0);
             groupname3.Location = new Point(18, 73);
             groupname3.Name = "groupname3";
-            groupname3.Size = new Size(69, 21);
+            groupname3.Size = new Size(182, 21);
             groupname3.TabIndex = 3;
-            groupname3.Text = "group 3";
+            groupname3.Text = "Creative Writing Circle";
             // 
             // group_description3
             // 
@@ -492,6 +494,7 @@
             group_description3.ReadOnly = true;
             group_description3.Size = new Size(281, 63);
             group_description3.TabIndex = 5;
+            group_description3.Text = "Weekly writing workshops and storytelling sessions.";
             // 
             // panel7
             // 
@@ -530,9 +533,9 @@
             label8.Font = new Font("Segoe UI", 10.2F, FontStyle.Regular, GraphicsUnit.Point, 0);
             label8.Location = new Point(18, 187);
             label8.Name = "label8";
-            label8.Size = new Size(100, 19);
+            label8.Size = new Size(86, 19);
             label8.TabIndex = 18;
-            label8.Text = "num_members";
+            label8.Text = "89 members";
             // 
             // label10
             // 
@@ -540,9 +543,9 @@
             label10.Font = new Font("Segoe UI", 10.2F, FontStyle.Regular, GraphicsUnit.Point, 0);
             label10.Location = new Point(18, 327);
             label10.Name = "label10";
-            label10.Size = new Size(74, 19);
+            label10.Size = new Size(150, 19);
             label10.TabIndex = 17;
-            label10.Text = "organiser1";
+            label10.Text = "Created by Sarah Chen";
             // 
             // label11
             // 
@@ -550,9 +553,9 @@
             label11.Font = new Font("Segoe UI", 10.2F, FontStyle.Regular, GraphicsUnit.Point, 0);
             label11.Location = new Point(18, 281);
             label11.Name = "label11";
-            label11.Size = new Size(78, 19);
+            label11.Size = new Size(124, 19);
             label11.TabIndex = 16;
-            label11.Text = "active since";
+            label11.Text = "Active 4 hours ago\n";
             // 
             // label12
             // 
@@ -560,9 +563,9 @@
             label12.Font = new Font("Segoe UI", 10.2F, FontStyle.Regular, GraphicsUnit.Point, 0);
             label12.Location = new Point(18, 232);
             label12.Name = "label12";
-            label12.Size = new Size(83, 19);
+            label12.Size = new Size(61, 19);
             label12.TabIndex = 15;
-            label12.Text = "num_events";
+            label12.Text = "4 events";
             // 
             // button7
             // 
