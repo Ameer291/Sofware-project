@@ -470,8 +470,12 @@ namespace Software_project
                     {
                         case "Groups":    // Add this case
                             var groupsForm = new GroupsForm();
+                            //groupsForm.Owner = this;
+                            groupsForm.StartPosition = FormStartPosition.Manual;
+                            groupsForm.Location = new Point(this.Left, this.Top);
+                            groupsForm.Size = new Size(ClientSize.Width, ClientSize.Height);
                             groupsForm.Show();
-                            this.Hide();
+                            this.Close();
                             break;
                         //case "Home":
                           //  var dashboardForm = new Dashboard();

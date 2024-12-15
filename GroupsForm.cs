@@ -471,8 +471,12 @@ namespace Software_project
                            // break;
                         case "Events":
                             var eventsForm = new EventsForm();
+                            // eventsForm.Owner = this;
+                            eventsForm.StartPosition = FormStartPosition.Manual;
+                            eventsForm.Location = new Point(this.Left, this.Top);
+                            eventsForm.Size = new Size(ClientSize.Width, ClientSize.Height);
                             eventsForm.Show();
-                            this.Hide();
+                            this.Close();
                             break;
                             // Add other form transitions as needed
                     }

@@ -25,7 +25,7 @@ namespace Sofware_project
         private DateTime DOB;
         private string Username;
         private Image Photo;
-        int Membertype; // 0 for admin, 1 for member, 2 for non member
+        int Membertype; // 1 for admin,0 for member, 2 for non member
         int profilevisibility; //1 admin only 2 -admin &user 3 everyone
         public User(string firstname, string lastname, string email, string phonenumber,
             string gender, string address, string username, string Password )

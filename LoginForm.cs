@@ -102,12 +102,12 @@ namespace Sofware_project
                 this.Hide();
                 if (LoginUser.GetInstance.GetCurrentUser() == null)
                     return;
-                if ( LoginUser.GetInstance.GetCurrentUser().GetMemberType() == 0 )
+                if ( LoginUser.GetInstance.GetCurrentUser().GetMemberType() == 1 )
                 {
                     UserManagementForm UserManagementObj = new UserManagementForm(); // Open the main form
                     UserManagementObj.Show();
                 }
-                else if ( LoginUser.GetInstance.GetCurrentUser().GetMemberType() == 1 )
+                else if ( LoginUser.GetInstance.GetCurrentUser().GetMemberType() == 0 )
                 {
                     DashboardForm DashboardForm = new DashboardForm();// Open the main form
                     DashboardForm.Show();
